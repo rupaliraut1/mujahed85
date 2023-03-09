@@ -16,6 +16,9 @@ jobs:
           node-version: 14
           cache: npm
           cache-dependency-path: ./package-lock.json
+      # 👇 yarn add
+      - name: Set up Node.js
+        run: yarn add
       # 👇 Build steps
       - name: Set up Node.js
         uses: actions/setup-node@v3
