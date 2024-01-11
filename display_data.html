@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Registration Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #registration-details {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 600px) {
+            #registration-details {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="registration-details">
+    <h2>Tour Registration Details</h2>
+
+    <!-- Display the form data here -->
+    <p><strong>Tour Package:</strong> <span id="tourPackageValue"></span></p>
+    <p><strong>Number of People:</strong> <span id="numberOfPeopleValue"></span></p>
+    <p><strong>Start Date:</strong> <span id="startDateValue"></span></p>
+    <p><strong>Preferred Time:</strong> <span id="preferredTimeValue"></span></p>
+    <p><strong>Discount Code:</strong> <span id="discountCodeValue"></span></p>
+    <p><strong>Total Cost:</strong> <span id="totalCostValue"></span></p>
+
+    <!-- Back button to return to the registration form -->
+    <button class="back-button" onclick="goBack()">Back to Registration Form</button>
+</div>
+
+<script>
+    // Retrieve the parameters from the URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Display the form data on the page
+    document.getElementById("tourPackageValue").innerText = params.get("tourPackage");
+    document.getElementById("numberOfPeopleValue").innerText = params.get("numberOfPeople");
+    document.getElementById("startDateValue").innerText = params.get("startDate");
+    document.getElementById("preferredTimeValue").innerText = params.get("preferredTime");
+    document.getElementById("discountCodeValue").innerText = params.get("discountCode");
+    document.getElementById("totalCostValue").innerText = params.get("totalCost");
+
+    // Function to navigate back
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

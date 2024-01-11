@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Tour Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #total-cost {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        #registration-btn {
+            background-color: #27ae60;
+        }
+
+        #registration-btn:hover {
+            background-color: #219d53;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="tourForm">
+        <!-- Form fields remain the same -->
+        <label for="tourPackage">Select Tour Package:</label>
+        <select id="tourPackage" name="tourPackage">
+            <option value="basic">Basic Package ($500)</option>
+            <option value="standard">Standard Package ($800)</option>
+            <option value="premium">Premium Package ($1200)</option>
+        </select>
+
+        <label for="numberOfPeople">Number of People:</label>
+        <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" required>
+
+        <label for="startDate">Select Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="preferredTime">Preferred Tour Time:</label>
+        <select id="preferredTime" name="preferredTime">
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+        </select>
+
+        <label for="discountCode">Discount Code:</label>
+        <input type="text" id="discountCode" name="discountCode">
+
+        <button type="button" onclick="calculateCost()">Calculate Cost</button>
+
+        <div id="total-cost"></div>
+
+        <button id="registration-btn" type="button" onclick="registerTour()">Register Now</button>
+    </form>
+
+    <script>
+        function calculateCost() {
+            // The calculateCost function remains the same
+        }
+
+        function registerTour() {
+            const tourPackage = document.getElementById("tourPackage").value;
+            const numberOfPeople = document.getElementById("numberOfPeople").value;
+            const startDate = document.getElementById("startDate").value;
+            const preferredTime = document.getElementById("preferredTime").value;
+            const discountCode = document.getElementById("discountCode").value;
+
+            const totalCostElement = document.getElementById("total-cost");
+            const totalCost = totalCostElement.textContent.trim();
+
+            // Prepare form data
+            const formData = {
+                tourPackage,
+                numberOfPeople,
+                startDate,
+                preferredTime,
+                discountCode,
+                totalCost
+            };
+
+            // Send form data to the server
+            sendFormData(formData);
+        }
+
+        function sendFormData(formData) {
+            const xhr = new XMLHttpRequest();
+            const url = 'your_server_script.php'; // Replace with your server-side script URL
+
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Tour registration completed! Thank you for choosing our service.');
+                    // You can add further actions or redirection after registration
+                }
+            };
+
+            const jsonData = JSON.stringify(formData);
+            xhr.send(jsonData);
+        }
+    </script>
+
+</body>
+
+</html>
