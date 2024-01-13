@@ -677,6 +677,9 @@ button:hover {
     gap: 15px;
     grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
 }
+.form-container p{
+    color: #68bb31;
+}
 
 label {
     font-weight: bold;
