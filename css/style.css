@@ -271,6 +271,23 @@
     transform: scale(1.1);
 }
 
+.flex
+{
+    height: 30vh;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.img-height
+{
+    height: 40vh;
+    width: 100%;
+}
+
+.cards-height
+{
+    height: 80vh;
+}
 
 /*** Booking ***/
 .booking {
