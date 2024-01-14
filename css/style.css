@@ -1229,8 +1229,8 @@ progress::-moz-progress-bar {
     padding: 20px;
     flex-direction: column;
     align-items: center;
-    /*margin : 20px 10px;*/
-    width: 350px;
+    /*margin : 20px 10px;
+    width: 350px;*/
 }
 
 .comment-box .user-image {
