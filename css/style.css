@@ -260,6 +260,7 @@
 /*** Package ***/
 .package-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    /* height: 33em; */
 }
 
 .package-item img {
@@ -540,6 +541,7 @@ background: #e4ec9f;
 /* Hide the images by default */
 .mySlides {
     display: none;
+    object-fit: cover;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
