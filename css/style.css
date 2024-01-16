@@ -271,12 +271,12 @@
     transform: scale(1.1);
 }
 
-/* .flex
+.flex
 {
     height: 30vh;
     width: 100%;
     margin-bottom: 25px;
-} */
+}
 
 .img-height
 {
@@ -532,8 +532,6 @@
     background: #ffff;
     justify-content: space-between;
 }
-
-
 
 .slideshow-container,
 .form-container {
