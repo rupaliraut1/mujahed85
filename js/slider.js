@@ -85,21 +85,55 @@ function registerTour() {
   var totalCost = document.getElementById("totalCost").value;
 
 
-  document.getElementById("tourPackage").value = "";
-  document.getElementById("numberOfPeople").value = "";
-  document.getElementById("startDate").value = "";
-  document.getElementById("preferredTime").value = "";
-  document.getElementById("discountCode").value = "";
-  document.getElementById("totalCost").value = "";
+  // document.getElementById("tourPackage").value = "";
+  // document.getElementById("numberOfPeople").value = "";
+  // document.getElementById("startDate").value = "";
+  // document.getElementById("preferredTime").value = "";
+  // document.getElementById("discountCode").value = "";
+  // document.getElementById("totalCost").value = "";
 
-  // Construct URL with form data as query parameters
-  var encodedData = "?tourPackage=" + encodeURIComponent(tourPackage) +
-    "&numberOfPeople=" + encodeURIComponent(numberOfPeople) +
-    "&startDate=" + encodeURIComponent(startDate) +
-    "&preferredTime=" + encodeURIComponent(preferredTime) +
-    "&discountCode=" + encodeURIComponent(discountCode) +
-    "&totalCost=" + encodeURIComponent(totalCost);
+  // // Construct URL with form data as query parameters
+  // var encodedData = "?tourPackage=" + encodeURIComponent(tourPackage) +
+  //   "&numberOfPeople=" + encodeURIComponent(numberOfPeople) +
+  //   "&startDate=" + encodeURIComponent(startDate) +
+  //   "&preferredTime=" + encodeURIComponent(preferredTime) +
+  //   "&discountCode=" + encodeURIComponent(discountCode) +
+  //   "&totalCost=" + encodeURIComponent(totalCost);
 
-  // Redirect to display_data.html with form data
-  window.location.href = "display_data.html" + encodedData;
+  // // Redirect to display_data.html with form data
+  // window.location.href = "display_data.html" + encodedData;
+
+  var phoneNumber ="+918265025800"
+
+  // // send whats app message
+  // var url = "https://wa.me/" + phoneNumber + "?text"
+  // +"TourOfPackage= " + tourPackage +"%0a"
+  // +"numberOfPeople=" + numberOfPeople + "%0a"
+  // +"startDate=" + startDate + "%0a"
+  // +"preferredTime=" + preferredTime + "%0a"
+  // +"discountCode=" + discountCode + "%0a"
+  // +"totalCost=" + totalCost;
+
+  // debugger;
+  // // window.open(url, "_blank").focus();
+
+  // otherWinRef = window.open(url,"_blank");
+  // window.focus();
+
+  var messageText = `
+  Tour Package: ${tourPackage}
+  Number of People: ${numberOfPeople}
+  Start Date: ${startDate}
+  Preferred Time: ${preferredTime}
+  Discount Code: ${discountCode}
+  Total Cost: ${totalCost}
+`;
+
+// Construct the WhatsApp message URL
+var phoneNumber = "+918265025800";
+var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(messageText);
+
+// Open WhatsApp window
+window.open(url, "_blank").focus();
+
 }
