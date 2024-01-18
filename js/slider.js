@@ -22,7 +22,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].styles.display = "block";
   dots[slideIndex - 1].className += " active";
   //captionText.innerHTML = dots[slideIndex-1].alt;
 
@@ -54,8 +54,6 @@ function calculateCost() {
 }
 
 
-
-
 function validateForm() {
   // Add your validation logic here
   var tourPackage = document.getElementById("tourPackage").value;
@@ -84,41 +82,8 @@ function registerTour() {
   var discountCode = document.getElementById("discountCode").value;
   var totalCost = document.getElementById("totalCost").value;
 
-
-  // document.getElementById("tourPackage").value = "";
-  // document.getElementById("numberOfPeople").value = "";
-  // document.getElementById("startDate").value = "";
-  // document.getElementById("preferredTime").value = "";
-  // document.getElementById("discountCode").value = "";
-  // document.getElementById("totalCost").value = "";
-
-  // // Construct URL with form data as query parameters
-  // var encodedData = "?tourPackage=" + encodeURIComponent(tourPackage) +
-  //   "&numberOfPeople=" + encodeURIComponent(numberOfPeople) +
-  //   "&startDate=" + encodeURIComponent(startDate) +
-  //   "&preferredTime=" + encodeURIComponent(preferredTime) +
-  //   "&discountCode=" + encodeURIComponent(discountCode) +
-  //   "&totalCost=" + encodeURIComponent(totalCost);
-
-  // // Redirect to display_data.html with form data
-  // window.location.href = "display_data.html" + encodedData;
-
   var phoneNumber ="+918265025800"
 
-  // // send whats app message
-  // var url = "https://wa.me/" + phoneNumber + "?text"
-  // +"TourOfPackage= " + tourPackage +"%0a"
-  // +"numberOfPeople=" + numberOfPeople + "%0a"
-  // +"startDate=" + startDate + "%0a"
-  // +"preferredTime=" + preferredTime + "%0a"
-  // +"discountCode=" + discountCode + "%0a"
-  // +"totalCost=" + totalCost;
-
-  // debugger;
-  // // window.open(url, "_blank").focus();
-
-  // otherWinRef = window.open(url,"_blank");
-  // window.focus();
 
   var messageText = `
   Tour Package: ${tourPackage}
@@ -137,3 +102,27 @@ var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message
 window.open(url, "_blank").focus();
 
 }
+
+
+// whats-app button
+
+// Open the WhatsApp contact panel
+function openPanel() {
+  document.getElementById('whatsapp-panel').style.display = 'block';
+}
+
+// Close the WhatsApp contact panel
+function closePanel() {
+  document.getElementById('whatsapp-panel').style.display = 'none';
+}
+
+// Open WhatsApp for chat
+function openWhatsApp(phoneNumber) {
+  var text = `
+  Tour Package:`;
+  var whatsappLink = 'https://wa.me/' + phoneNumber +"?text" + encodeURIComponent(text); ;
+  window.open(whatsappLink, '_blank');
+}
+
+// Attach click event to the WhatsApp button
+document.getElementById('whatsapp-button').addEventListener('click', openPanel);
