@@ -36,14 +36,7 @@
     <!-- <link rel="stylesheet" href="practice.css"> -->
 </head>
 
-<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-<script>
-    var wa_btnSetting = { "btnColor": "#86B817", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "left", "whatsAppNumber": "+919930545963", "welcomeMessage": "Hello", "zIndex": 999999, "btnColorScheme": "light" };
-    var wa_widgetSetting = { "title": "fab mumbai tours", "subTitle": "Let's chat here!", "headerBackgroundColor": "#86B817", "headerColorScheme": "dark", "greetingText": "Hi there! \nHow can I help you?", "ctaText": "", "btnColor": "#86B817", "cornerRadius": 40, "welcomeMessage": "Hello", "btnColorScheme": "light", "brandImage": "https://uploads-ssl.webflow.com/5f68a65cd5188c058e27c898/6204c4267b92625c9770f687_whatsapp-chat-widget-dummy-logo.png", "darkHeaderColorScheme": { "title": "#333333", "subTitle": "#4F4F4F" } };
-    window.onload = () => {
-        _waEmbed(wa_btnSetting, wa_widgetSetting);
-    };
-</script>
+
 
 
 <body>
@@ -121,7 +114,7 @@
                             <a href="BookingPages/elephanta-caves.html" class="dropdown-item">Elephanta Caves Tour By Public Serry</a>
                         </div>
                     </div>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
@@ -143,7 +136,54 @@
     </div>
     <!-- Navbar & Hero End -->
 
+    
+    <!-- whats-button start -->
 
+    <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+        <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+        <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+    </div>
+
+    <!-- WhatsApp Contact Panel -->
+    <div id="whatsapp-panel" class="contact-panel">
+        <div class="close-btn" onclick="closePanel()">&times;</div>
+        <div class="panel-header">
+                <p>Chat with us</p>
+                <P>Get in contact with our representatives</P>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 1">
+                <div class="contact-details">
+                    <p class="p-color">Fahim</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+                
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 2">
+                <div class="contact-details">
+                    <p class="p-color">Bernice</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 3">
+                <div class="contact-details">
+                    <p class="p-color">mak</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- whats-button end -->
+
+    
+    
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -450,6 +490,7 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-solid fa-angle-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -465,6 +506,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    
 </body>
 
 </html>
