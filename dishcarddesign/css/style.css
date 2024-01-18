@@ -51,15 +51,20 @@
   .btn-primary {
     border-radius: 50px;
     width: 120px;
+    background-color: #86B817;
   }
   
   .btn-primary:hover {
-    background-color: black;
+    background-color: white;
     border: none;
+    color: #86B817;
   }
   
   h3,
   h5 {
-    color: rgb(0, 91, 228);
+    color: #86B817;
   }
   
+  .card-body i {
+    color: #86B817;
+  }
