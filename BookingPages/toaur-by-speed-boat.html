@@ -27,13 +27,67 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
+    
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
 </head>
+
+<!-- call button start -->
+
+<div class="call-button">
+    <a href="tel:+918265025800"><i class="fa fa-solid fa-phone"></i></a>
+</div>
+
+<!-- call button end -->
+
+<!-- whats-button start -->
+
+<div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+    <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+    <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+</div>
+
+<!-- WhatsApp Contact Panel -->
+<div id="whatsapp-panel" class="contact-panel">
+    <div class="close-btn" onclick="closePanel()">&times;</div>
+    <div class="panel-header">
+        <p>Chat with us</p>
+        <P>Get in contact with our representatives</P>
+    </div>
+    <div class="contact-container">
+        <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+            <img src="img/button/man-icon-png.png" alt="Contact 1">
+            <div class="contact-details">
+                <p class="p-color">Fahim</p>
+                <P>support</P>
+                <!-- <p class="online-p">I'm online</p> -->
+            </div>
+
+        </div>
+        <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+            <img src="img/button/man-icon-png.png" alt="Contact 2">
+            <div class="contact-details">
+                <p class="p-color">Bernice</p>
+                <P>support</P>
+                <!-- <p class="online-p">I'm online</p> -->
+            </div>
+        </div>
+        <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+            <img src="img/button/man-icon-png.png" alt="Contact 3">
+            <div class="contact-details">
+                <p class="p-color">mak</p>
+                <P>support</P>
+                <!-- <p class="online-p">I'm online</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- whats-button end -->
+
 
 <body>
     <!-- Spinner Start -->
@@ -87,10 +141,10 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
-             <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="../index.html" class="nav-item nav-link">Home</a>
-                    <!-- <div class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a href="../packages.html" class="nav-item nav-link active">Packages</a>
                         <div class="dropdown-menu m-0">
                             <a href="../BookingPages/mumbai-shore-excrusion.html" class="dropdown-item">Private Mumbai City Tour</a>
@@ -103,11 +157,14 @@
                             <a href="../BookingPages/best-street-food-tour.html" class="dropdown-item">Best Street Food Tour Mumbai</a>
                             <a href="../BookingPages/dharavi-slums.html" class="dropdown-item">Dharavi Slum Tour In Mumbai</a>
                             <a href="../BookingPages/mud-fort.html" class="dropdown-item">The Unbeatable Murud Fort</a>
+                            <!-- <a href="#" class="dropdown-item">Good Morning Mumbai (Mumbai Dawn Tour)</a> -->
+                            <!-- <a href="#" class="dropdown-item">Elephanta Caves Tour &#038; Island Excursion by Speed boat</a> -->
                             <a href="../BookingPages/good-night-mumbai.html" class="dropdown-item">Good Night Mumbai | Mumbai Night Tour</a>
+                            <!-- <a href="#" class="dropdown-item">Mumbai City with Bollywood Studio Tour</a> -->
                             <a href="../BookingPages/sari-shop.html" class="dropdown-item">Ladies Special Bazar Tour Mumbai</a>
                             <a href="../BookingPages/elephanta-caves.html" class="dropdown-item">Elephanta Caves Tour By Public Serry</a>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- <a href="../service.html" class="nav-item nav-link">Services</a> -->
                     <a href="../contact.html" class="nav-item nav-link">Contact</a>
                 </div>
@@ -225,7 +282,7 @@
                 </select>
 
                 <label for="numberOfPeople">Number of People:</label>
-                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" required>
+                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" max="3" onchange="calculateCost()" required>
 
                 <label for="startDate">Select Start Date:</label>
                 <input type="date" id="startDate" name="startDate" required>
@@ -244,7 +301,8 @@
                 <input type="text" id="totalCost" name="totalCost" required readonly>
 
                 <div id="buttons-container">
-                    <button id="calculate-cost-btn" type="button" onclick="calculateCost();">Calculate Cost</button>
+                                        <!-- <button id="calculate-cost-btn" type="button" onclick="calculateCost();">Calculate Cost</button> -->
+
                     <button id="registration-btn" type="button" onclick="registerTour();">Register Now</button>
                 </div>
 
@@ -629,14 +687,6 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         
-<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-<script>
-    var wa_btnSetting = { "btnColor": "#86B817", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "left", "whatsAppNumber": "+919930545963", "welcomeMessage": "Hello", "zIndex": 999999, "btnColorScheme": "light" };
-    var wa_widgetSetting = { "title": "fab mumbai tours", "subTitle": "Let's chat here!", "headerBackgroundColor": "#86B817", "headerColorScheme": "dark", "greetingText": "Hi there! \nHow can I help you?", "ctaText": "", "btnColor": "#86B817", "cornerRadius": 40, "welcomeMessage": "Hello", "btnColorScheme": "light", "brandImage": "https://uploads-ssl.webflow.com/5f68a65cd5188c058e27c898/6204c4267b92625c9770f687_whatsapp-chat-widget-dummy-logo.png", "darkHeaderColorScheme": { "title": "#333333", "subTitle": "#4F4F4F" } };
-    window.onload = () => {
-        _waEmbed(wa_btnSetting, wa_widgetSetting);
-    };
-</script>
 
 
         <div class="container py-5">
@@ -739,7 +789,7 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-solid fa-angle-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
@@ -755,6 +805,7 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+    <script src="../js/slider.js"></script>
     <script src="../js/slider.js"></script>
 </body>
 

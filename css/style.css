@@ -467,6 +467,37 @@
     border-right: none;
 }
 
+        /* call button start */
+
+        .call-button{
+            position: fixed;
+            bottom: 2rem;
+            right: 2em;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .call-button a {
+            padding: 5px 8px ;
+            font-size: 25px;
+            border-radius: 50%;
+            height: 48px;
+            width: 48px;
+            display: inline-block;
+            border: 2px solid #dddada;
+            background-color: #86B817;
+            color: antiquewhite;
+        }
+        .call-button a:hover{
+            padding: 12px;
+            font-size: 25px;
+            border: 2px solid #86B817;
+            background-color: #f5ecec;
+            color: #86B817;
+        }
+
+        /* call button end */
+
+
 
 /*********************/
 /* whatsapp button */
@@ -474,10 +505,13 @@
 
 .floating-button {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 2rem;
+    left: 2rem;
+    height: 48px;
+    width: 48px;
     background-color: #86B817;
-    padding: 11.5px 15px;
+    padding: 8px 9px;
+    border: 2px solid #fff;
     border-radius: 50%;
     cursor: pointer;
     transition:  0.3s ease;
@@ -485,22 +519,19 @@
 }
 
 .floating-button i {
-    font-size: 35px;
+    font-size: 30px;
     color: white;
 }
 
 .floating-button i:hover {
-    color: white;
+    color: #86B817;
 }
 
 .floating-button:hover {
-    background-color: #128c7e;
+    background-color: #fff;
+    border: 1px solid #86B817;
 }
 
-.whatsapp-icon {
-    width: 50px;
-    height: 50px;
-}
 .panel-header{
     background-color: #86B817;;
     height:6em;
