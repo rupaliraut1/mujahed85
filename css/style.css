@@ -257,38 +257,6 @@
 }
 
 
-/*** Package ***/
-.package-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    /* height: 33em; */
-}
-
-.package-item img {
-    transition: .5s;
-}
-
-.package-item:hover img {
-    transform: scale(1.1);
-}
-
-.flex
-{
-    height: 30vh;
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-.img-height
-{
-    height: 30vh;   
-    width: 100%;   
-}
-
-.cards-height
-{
-    height: 80vh;
-}
-
 /*** Booking ***/
 .booking {
     background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
