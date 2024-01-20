@@ -488,8 +488,6 @@
             color: antiquewhite;
         }
         .call-button a:hover{
-            padding: 12px;
-            font-size: 25px;
             border: 2px solid #86B817;
             background-color: #f5ecec;
             color: #86B817;
