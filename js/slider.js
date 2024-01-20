@@ -126,3 +126,27 @@ function openWhatsApp(phoneNumber) {
 
 // Attach click event to the WhatsApp button
 document.getElementById('whatsapp-button').addEventListener('click', openPanel);
+
+
+// contact form section start
+
+function whatsapbtn()
+{
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var whatsapbtn = `
+    Name: ${name}
+    Email: ${email}
+    Message: ${message}`
+
+    // Construct the WhatsApp message URL
+    var phoneNumber = "+918857029127";
+    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsapbtn);
+
+    // Open WhatsApp window
+    window.open(url, "_blank").focus();
+}
+
+// contact form section End
