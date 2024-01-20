@@ -33,9 +33,54 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/contact-form.css">
 </head>
 
+        
+    <!-- whats-button start -->
+
+    <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+        <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+        <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+    </div>
+
+    <!-- WhatsApp Contact Panel -->
+    <div id="whatsapp-panel" class="contact-panel">
+        <div class="close-btn" onclick="closePanel()">&times;</div>
+        <div class="panel-header">
+                <p>Chat with us</p>
+                <P>Get in contact with our representatives</P>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 1">
+                <div class="contact-details">
+                    <p class="p-color">Fahim</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+                
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 2">
+                <div class="contact-details">
+                    <p class="p-color">Bernice</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 3">
+                <div class="contact-details">
+                    <p class="p-color">mak</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- whats-button end -->
 
 
 <body>
@@ -132,59 +177,7 @@
         </div>
     </div>
     <!-- Navbar & Hero End -->
- 
-    <!-- call button start -->
 
-    <div class="call-button">
-        <a href="tel:+918265025800"><i class="fa fa-solid fa-phone"></i></a>
-    </div>
-
-    <!-- call button end -->
-    
-    <!-- whats-button start -->
-
-    <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
-        <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
-        <i class="fab fa-brands fa-whatsapp fw-normal"></i>
-    </div>
-
-    <!-- WhatsApp Contact Panel -->
-    <div id="whatsapp-panel" class="contact-panel">
-        <div class="close-btn" onclick="closePanel()">&times;</div>
-        <div class="panel-header">
-            <p>Chat with us</p>
-            <P>Get in contact with our representatives</P>
-        </div>
-        <div class="contact-container">
-            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
-                <img src="img/button/man-icon-png.png" alt="Contact 1">
-                <div class="contact-details">
-                    <p class="p-color">Fahim</p>
-                    <P>support</P>
-                    <!-- <p class="online-p">I'm online</p> -->
-                </div>
-
-            </div>
-            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
-                <img src="img/button/man-icon-png.png" alt="Contact 2">
-                <div class="contact-details">
-                    <p class="p-color">Bernice</p>
-                    <P>support</P>
-                    <!-- <p class="online-p">I'm online</p> -->
-                </div>
-            </div>
-            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
-                <img src="img/button/man-icon-png.png" alt="Contact 3">
-                <div class="contact-details">
-                    <p class="p-color">mak</p>
-                    <P>support</P>
-                    <!-- <p class="online-p">I'm online</p> -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- whats-button end -->
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
@@ -240,9 +233,19 @@
                     </iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfwd7UPsIISQaFmCY-ha1Zq5r_y66GS9Qc5-onFYW4p986KxA/viewform?embedded=true"
-                        width="640" height="746" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                   <form action="#">
+                    <h4 class="form-heading">Get in Touch</h4>
+                    <input type="text" placeholder="Enter Your Name" id="name" name="name">
+                    <br>
+
+                    <input type="email" placeholder="Enter Your Email Address" id="email" name="email">
+                    <br>
+
+                    <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+                    <br>
+                    
+                    <button id="btn" onclick="whatsapbtn()">Send</button>
+                   </form>
                 </div>
             </div>
         </div>
@@ -354,7 +357,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-solid fa-angle-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
@@ -370,6 +373,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
