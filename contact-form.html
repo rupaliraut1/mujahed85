@@ -33,7 +33,55 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
 </head>
+
+        
+    <!-- whats-button start -->
+
+    <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+        <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+        <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+    </div>
+
+    <!-- WhatsApp Contact Panel -->
+    <div id="whatsapp-panel" class="contact-panel">
+        <div class="close-btn" onclick="closePanel()">&times;</div>
+        <div class="panel-header">
+                <p>Chat with us</p>
+                <P>Get in contact with our representatives</P>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 1">
+                <div class="contact-details">
+                    <p class="p-color">Fahim</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+                
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 2">
+                <div class="contact-details">
+                    <p class="p-color">Bernice</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 3">
+                <div class="contact-details">
+                    <p class="p-color">mak</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- whats-button end -->
+
 
 <body>
     <!-- Spinner Start -->
@@ -44,6 +92,7 @@
         </div>
     </div>
     <!-- Spinner End -->
+
 
 
     <!-- Topbar Start -->
@@ -121,8 +170,6 @@
                         <p class="fs-4 text-white mb-4 animated slideInDown">Explore Mumbai: Where Every Street Tells a
                             Story.</p>
                         <div class="position-relative w-75 mx-auto animated slideInDown">
-                            <!-- <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button> -->
                         </div>
                     </div>
                 </div>
@@ -132,53 +179,83 @@
     <!-- Navbar & Hero End -->
 
 
-    <!-- FAQ Start -->
-    <div class="descryption-container">
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h1 class="mb-5">Contact For Any Query</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Get In Touch</h5>
+                    <p class="mb-4">
+                        Your inquiries are not merely messages to us; they're opportunities to build meaningful
+                        connections.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Office</h5>
+                            <p class="mb-0">Metro shopping plaza, 1st floor, shop no.241, opp. delhi darbar, near regal
+                                cinema, colaba causeway, mumbai-400039
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+91 9930545963</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">fabmumbaitours@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482633.0404997888!2d72.55150444305367!3d19.08260679278387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1d691f0dfd38ddd%3A0xb72e848bb352e32f!2sFab%20Mumbai%20Tours!5e0!3m2!1sen!2sin!4v1705293923299!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                   <form action="#">
+                    <h4 class="form-heading">Get in Touch</h4>
+                    <input type="text" placeholder="Enter Your Name" id="name" name="name">
+                    <br>
 
-        <h3>FAQ:</h3>
-        <div class="faq-item">
-            <div class="faq-question"><strong>Q:</strong> What makes the Private Mumbai City Tour with Local Train
-                Experience unique?</div>
-            <div class="faq-answer"><strong>A:</strong> Explore Mumbai's highlights with a personalized touch, including
-                a unique local train experience,
-                offering an authentic and immersive city exploration.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question"><strong>Q:</strong> Can I customize the Private Mumbai City Tour itinerary to suit
-                my interests?</div>
-            <div class="faq-answer"><strong>A:</strong> Absolutely! Tailor your tour by selecting specific landmarks or
-                cultural elements, ensuring a
-                personalized and memorable exploration of Mumbai.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question"><strong>Q:</strong> How long is the duration of the Private Mumbai Tour with Local
-                Train Experience?</div>
-            <div class="faq-answer"><strong>A:</strong> The tour typically spans [4-5] hours, allowing you ample time to
-                visit key attractions, experience
-                local train travel, and gain a deeper understanding of Mumbai.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question"><strong>Q:</strong> Will there be knowledgeable guides providing insights during
-                the city tour?</div>
-            <div class="faq-answer"><strong>A:</strong> Yes, experienced guides accompany you, offering insights into
-                Mumbai's history, culture, and
-                providing context to the unique local train experience.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question"><strong>Q:</strong> Is transportation included for the Mumbai Tour from the
-                starting point?</div>
-            <div class="faq-answer"><strong>A:</strong> Yes, convenient transportation options are included, ensuring a
-                hassle-free journey to and from
-                the tour starting point, allowing you to focus on enjoying the city and train</div>
+                    <input type="email" placeholder="Enter Your Email Address" id="email" name="email">
+                    <br>
+
+                    <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+                    <br>
+                    
+                    <button id="btn" onclick="whatsapbtn()">Send</button>
+                   </form>
+                </div>
+            </div>
         </div>
     </div>
-
-
-    <!-- FAQ End -->
+    <!-- Contact End -->
 
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -194,7 +271,7 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
                         Metro shopping plaza,
                         1st &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;floor, shop no. 241, opp.
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delhi Darbar, near Regal 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delhi Darbar, near Regal
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cinema,
                         Colaba Causeway, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mumbai-400039
                     </p>
@@ -230,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-               <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Packages</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
@@ -268,19 +345,19 @@
                         <!-- <div class="footer-menu">
                             <a href="">Home</a>
                             <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div> -->
+                            <a href="">Help</a> -->
+                        <a href="FAQ.html">FQAs</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <!-- Footer End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-solid fa-angle-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -296,6 +373,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
