@@ -33,7 +33,11 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact-form.css">
+
 </head>
+
+
 
 <body>
     <!-- Spinner Start -->
@@ -46,15 +50,16 @@
     <!-- Spinner End -->
 
 
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York,
-                        USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Metro Shoping Plaza, Colaba,
+                        Mumbai</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9930545963</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>fabmumbaitours@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -117,67 +122,147 @@
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Testimonial</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Testimonial</li>
-                            </ol>
-                        </nav>
+                        <h1 class="display-3 text-white mb-3 animated slideInDown">Exploring mumbai with us.</h1>
+                        <p class="fs-4 text-white mb-4 animated slideInDown">Explore Mumbai: Where Every Street Tells a
+                            Story.</p>
+                        <div class="position-relative w-75 mx-auto animated slideInDown">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Navbar & Hero End -->
+ 
+    <!-- call button start -->
 
+    <div class="call-button">
+        <a href="tel:+918265025800"><i class="fa fa-solid fa-phone"></i></a>
+    </div>
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Clients Say!!!</h1>
+    <!-- call button end -->
+    
+    <!-- whats-button start -->
+
+    <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+        <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+        <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+    </div>
+
+    <!-- WhatsApp Contact Panel -->
+    <div id="whatsapp-panel" class="contact-panel">
+        <div class="close-btn" onclick="closePanel()">&times;</div>
+        <div class="panel-header">
+            <p>Chat with us</p>
+            <P>Get in contact with our representatives</P>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 1">
+                <div class="contact-details">
+                    <p class="p-color">Fahim</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
+
             </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 2">
+                <div class="contact-details">
+                    <p class="p-color">Bernice</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
                 </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 3">
+                <div class="contact-details">
+                    <p class="p-color">mak</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
 
+    <!-- whats-button end -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h1 class="mb-5">Contact For Any Query</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Get In Touch</h5>
+                    <p class="mb-4">
+                        Your inquiries are not merely messages to us; they're opportunities to build meaningful
+                        connections.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Office</h5>
+                            <p class="mb-0">Metro shopping plaza, 1st floor, shop no.241, opp. delhi darbar, near regal
+                                cinema, colaba causeway, mumbai-400039
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+91 9930545963</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">fabmumbaitours@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482633.0404997888!2d72.55150444305367!3d19.08260679278387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1d691f0dfd38ddd%3A0xb72e848bb352e32f!2sFab%20Mumbai%20Tours!5e0!3m2!1sen!2sin!4v1705293923299!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form action="#" id="contact-form">
+                        <label for="name">Full Name :</label>
+                        <input type="text" placeholder="Enter Your Name" id="name" name="name">
+                        <br>
+    
+                        <label for="email">Email :</label>
+                        <input type="email" placeholder="Enter Your Email Address" id="email" name="email">
+                        <br>
+    
+                        <label for="message">Message :</label>
+                        <textarea name="message" id="message" cols="39" rows="5" placeholder="Enter Your Message"></textarea>
+                        <br>
+                        
+                        <button id="btn" onclick="whatsapbtn()">Send</button>
+                       </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -185,10 +270,6 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <!-- <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a> -->
                     <a class="btn btn-link" href="FAQ.html">FAQs & Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -196,12 +277,12 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
                         Metro shopping plaza,
                         1st &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;floor, shop no. 241, opp.
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delhi Darbar, near Regal 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delhi Darbar, near Regal
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cinema,
                         Colaba Causeway, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mumbai-400039
                     </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9930545963</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>fabmumbaitours@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -232,23 +313,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Packages</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/packages/autolady.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/packages/boat-couple.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/packages/taj-front.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/packages/cave.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/packages/dinner.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/packages/TAIMG_8011-1536x1152.jpg" alt="">
+                        </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">MumbaiTourist.com</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">fabmumbaitours.com</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://mujahedh.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://mujahedh.com">Mujahed H</a>
@@ -265,11 +359,12 @@
             </div>
         </div>
     </div>
+
     <!-- Footer End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
@@ -285,6 +380,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 
 </html>

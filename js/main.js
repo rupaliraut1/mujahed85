@@ -92,3 +92,23 @@
     
 })(jQuery);
 
+// Testmonials Section Start
+
+document.addEventListener('DOMContentLoaded', function () {
+    var paragraphs = document.querySelectorAll('.read-more-paragraph');
+    var buttons = document.querySelectorAll('.read-more-button');
+  
+    buttons.forEach(function (button, index) {
+        button.addEventListener('click', function () {
+            // Toggle the 'read-more' class on the corresponding paragraph
+            paragraphs[index].classList.toggle('read-more');
+  
+            // Change the button text based on the paragraph's state
+            var buttonText = paragraphs[index].classList.contains('read-more') ? 'Read Less' : 'Read More';
+            button.textContent = buttonText;
+        });
+    });
+  });
+  
+  // Testmonials Section End
+
