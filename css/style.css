@@ -551,9 +551,9 @@
 .contact-panel {
     display: none;
     position: fixed;
-    bottom: 30rem; /* Adjusted to appear above the button */
+    bottom: 26rem; /* Adjusted to appear above the button */
     left: 20px;
-    width: 350px;
+    width: 300px;
     background-color: #f5f5f5;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 12px;

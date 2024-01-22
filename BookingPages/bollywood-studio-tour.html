@@ -269,14 +269,14 @@
                 <p>BOLLYWOOD STUDIO TOUR</p>
                 <!-- Form fields remain the same -->
                 <label for="tourPackage">Select Tour Package:</label>
-                <select id="tourPackage" name="tourPackage">
+                <select id="tourPackage" name="tourPackage" >
                     <option value="7200">₹7,200.00</option>
                     <!-- <option value="800">Standard Package ($800)</option>
                     <option value="1200">Premium Package ($1200)</option> -->
                 </select>
 
                 <label for="numberOfPeople">Number of People:</label>
-                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" max="3" onchange="calculateCost()" required>
+                <input type="number" id="numberOfPeople" name="numberOfPeople" value="1" min="1" max="3" onchange="calculateCost()" required>
 
                 <label for="startDate">Select Start Date:</label>
                 <input type="date" id="startDate" name="startDate" required>
@@ -798,7 +798,6 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    <script src="../js/slider.js"></script>
     <script src="../js/slider.js"></script>
 </body>
 
