@@ -1,8 +1,10 @@
 
 form
 {    
-    width: 100%;
+    width: 50%;
     height: auto;
+    margin: auto;
+    margin-bottom: 100px;
     border: 1px solid black;
     border-radius: 20px;
     padding: 10px 10px;
@@ -56,3 +58,4 @@ form button:hover
     color: #a7f00a;
     font-weight: bold;
 }
+

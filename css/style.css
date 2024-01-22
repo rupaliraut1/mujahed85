@@ -470,6 +470,16 @@
     border-right: none;
 }
 
+.footer-address
+{
+    color: white;
+}
+
+.phone, .email
+{
+    color: white;
+}
+
         /* call button start */
 
         .call-button{
