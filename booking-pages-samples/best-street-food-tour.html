@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="img/logo/fab-blue.png">
+    <link rel="icon" href="/img/logo/fab-blue.png">
     <title>FAB Mumbai Tours</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,11 +29,65 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
+
+<!-- call button start -->
+
+<div class="call-button">
+    <a href="tel:+918265025800"><i class="fa fa-solid fa-phone"></i></a>
+</div>
+
+<!-- call button end -->
+
+<!-- whats-button start -->
+
+<div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+    <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+    <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+</div>
+
+<!-- WhatsApp Contact Panel -->
+<div id="whatsapp-panel" class="contact-panel">
+    <div class="close-btn" onclick="closePanel()">&times;</div>
+    <div class="panel-header">
+        <p>Chat with us</p>
+        <P>Get in contact with our representatives</P>
+    </div>
+    <div class="contact-container">
+        <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+            <img src="img/button/man-icon-png.png" alt="Contact 1">
+            <div class="contact-details">
+                <p class="p-color">Fahim</p>
+                <P>support</P>
+                <!-- <p class="online-p">I'm online</p> -->
+            </div>
+
+        </div>
+        <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+            <img src="img/button/man-icon-png.png" alt="Contact 2">
+            <div class="contact-details">
+                <p class="p-color">Bernice</p>
+                <P>support</P>
+                <!-- <p class="online-p">I'm online</p> -->
+            </div>
+        </div>
+        <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+            <img src="img/button/man-icon-png.png" alt="Contact 3">
+            <div class="contact-details">
+                <p class="p-color">mak</p>
+                <P>support</P>
+                <!-- <p class="online-p">I'm online</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- whats-button end -->
+
 
 <body>
     <!-- Spinner Start -->
@@ -54,7 +108,7 @@
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Metro Shoping Plaza, Colaba,
                         Mumbai</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9930545963</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@fabmumbaitours.com</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>fabmumbaitours@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -79,8 +133,9 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><img src="img/logo/fab-logo.png" class="my-logo me-3"></h1>
+                      <a href="../index.html" class="navbar-brand p-0">
+                <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>FAB</h1> -->
+                <h1 class="text-primary m-0"><img src="../img/logo/fab-logo.png" class="my-logo me-3"></h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -88,42 +143,42 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                     <!-- <div class="nav-item dropdown">
-                        <a href="packages.html" class="nav-item nav-link">Packages</a>
+                    <a href="../index.html" class="nav-item nav-link">Home</a>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="../packages.html" class="nav-item nav-link active">Packages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="BookingPages/mumbai-shore-excrusion.html" class="dropdown-item">Private Mumbai City Tour</a>
-                            <a href="BookingPages/bollywood-studio-tour.html" class="dropdown-item">Bollywood Studio Tour</a>
-                            <a href="BookingPages/toaur-by-speed-boat.html" class="dropdown-item">Elephanta Caves Tour</a>
-                            <a href="BookingPages/group-city-tour.html" class="dropdown-item">Mumbai on Wheels Group City Tour</a>
-                            <a href="BookingPages/good-morning-mumbai.html" class="dropdown-item">Good Morning Mumbai</a>
-                            <a href="BookingPages/party.html" class="dropdown-item">Party All Night (Pub/club crawl)</a>
-                            <a href="BookingPages/elephanta-caves.html" class="dropdown-item">Mumbai City Tour with Elephanta Tour</a>
-                            <a href="BookingPages/best-street-food-tour.html" class="dropdown-item">Best Street Food Tour Mumbai</a>
-                            <a href="BookingPages/dharavi-slums.html" class="dropdown-item">Dharavi Slum Tour In Mumbai</a>
-                            <a href="BookingPages/mud-fort.html" class="dropdown-item">The Unbeatable Murud Fort</a>
-                            <a href="BookingPages/good-night-mumbai.html" class="dropdown-item">Good Night Mumbai | Mumbai Night Tour</a>
-                            <a href="BookingPages/sari-shop.html" class="dropdown-item">Ladies Special Bazar Tour Mumbai</a>
-                            <a href="BookingPages/elephanta-caves.html" class="dropdown-item">Elephanta Caves Tour By Public Serry</a>
+                            <a href="../BookingPages/mumbai-shore-excrusion.html" class="dropdown-item">Private Mumbai City Tour</a>
+                            <a href="../BookingPages/bollywood-studio-tour.html" class="dropdown-item">Bollywood Studio Tour</a>
+                            <a href="../BookingPages/toaur-by-speed-boat.html" class="dropdown-item">Elephanta Caves Tour</a>
+                            <a href="../BookingPages/group-city-tour.html" class="dropdown-item">Mumbai on Wheels Group City Tour</a>
+                            <a href="../BookingPages/good-morning-mumbai.html" class="dropdown-item">Good Morning Mumbai</a>
+                            <a href="../BookingPages/party.html" class="dropdown-item">Party All Night (Pub/club crawl)</a>
+                            <a href="../BookingPages/elephanta-caves.html" class="dropdown-item">Mumbai City Tour with Elephanta Tour</a>
+                            <a href="../BookingPages/best-street-food-tour.html" class="dropdown-item">Best Street Food Tour Mumbai</a>
+                            <a href="../BookingPages/dharavi-slums.html" class="dropdown-item">Dharavi Slum Tour In Mumbai</a>
+                            <a href="../BookingPages/mud-fort.html" class="dropdown-item">The Unbeatable Murud Fort</a>
+                            <a href="../BookingPages/good-night-mumbai.html" class="dropdown-item">Good Night Mumbai | Mumbai Night Tour</a>
+                            <a href="../BookingPages/sari-shop.html" class="dropdown-item">Ladies Special Bazar Tour Mumbai</a>
+                            <a href="../BookingPages/elephanta-caves.html" class="dropdown-item">Elephanta Caves Tour By Public Serry</a>
                         </div>
                     </div> -->
-                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <!-- <a href="../service.html" class="nav-item nav-link">Services</a> -->
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
 
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
             <div class="container py-5">
-                
+
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Booking</h1>
+                        <h1 class="display-3 text-white animated slideInDown">BEST STREET FOOD TOUR</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
+                                <li class="breadcrumb-item"><a href="#">MUMBAI TOURS & EXCURSIONS</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">BEST STREET FOOD TOUR MUMBAI</li>
                             </ol>
                         </nav>
                     </div>
@@ -133,15 +188,8 @@
     </div>
     <!-- Navbar & Hero End -->
 
-    <!-- header start  -->
 
-    <div class="headercontainer">
-        <h1></h1>
-        <p><a href="index.html"><span>Home</span></a><span></span><span></span></p>
-    </div>
 
-    <!-- header end  -->
-    
     <!-- Slider Section-1 start -->
 
     <div class="container-wrapper">
@@ -151,32 +199,32 @@
             <div class="slider-container">
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img src="" style="width:100%">
+                    <img src="../img/street-food/chicken-seek.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">2 / 6</div>
-                    <img src="img/packages/autolady.jpg" style="width:100%">
+                    <img src="../img/street-food/couples-dinner.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">3 / 6</div>
-                    <img src="img/packages/boat-couple.jpg" style="width:100%">
+                    <img src="../img/street-food/desi-thali.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">4 / 6</div>
-                    <img src="img/packages/cave.jpg" style="width:100%">
+                    <img src="../img/street-food/dhaipuri-bil.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">5 / 6</div>
-                    <img src="img/packages/dharavi-slum-tour.jpg" style="width:100%">
+                    <img src="../img/street-food/family-pav-bhaji.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">6 / 6</div>
-                    <img src="img/packages/dinner.jpg" style="width:100%">
+                    <img src="../img/street-food/fmily-dinner.jpg" style="width:100%">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -188,109 +236,74 @@
 
                 <div class="row">
                     <div class="column">
-                        <img class="demo cursor" src="img/packages/autolady.jpg" style="width:100%"
+                        <img class="demo cursor" src="../img/street-food/chicken-seek.jpg" style="width:100%"
                             onclick="currentSlide(1)" alt="The Woods">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="img/packages/boat-couple.jpg" style="width:100%"
+                        <img class="demo cursor" src="../img/street-food/couples-dinner.jpg" style="width:100%"
                             onclick="currentSlide(2)" alt="Cinque Terre">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="img/packages/cave.jpg" style="width:100%" onclick="currentSlide(3)"
-                            alt="Mountains and fjords">
+                        <img class="demo cursor" src="../img/street-food/desi-thali.jpg" style="width:100%"
+                            onclick="currentSlide(3)" alt="Mountains and fjords">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="img/packages/City-with-Bollywood-Front.jpg" style="width:100%"
+                        <img class="demo cursor" src="../img/street-food/dhaipuri-bil.jpg" style="width:100%"
                             onclick="currentSlide(4)" alt="Northern Lights">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="img/packages/dharavi-slum-tour.jpg" style="width:100%"
+                        <img class="demo cursor" src="../img/street-food/family-pav-bhaji.jpg" style="width:100%"
                             onclick="currentSlide(5)" alt="Nature and sunrise">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="img/packages/dinner.jpg" style="width:100%" onclick="currentSlide(6)"
-                            alt="Snowy Mountains">
+                        <img class="demo cursor" src="../img/street-food/fmily-dinner.jpg" style="width:100%"
+                            onclick="currentSlide(6)" alt="Snowy Mountains">
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <!-- <div class="form-container">-->
-            <!-- Your existing tour registration form code here -->
-            <!-- <form id="tourForm"> -->
-                <!-- Form fields remain the same -->
-                <!--<label for="tourPackage">Select Tour Package:</label>
-                <select id="tourPackage" name="tourPackage">
-                    <option value="500">Basic Package ($500)</option>
-                    <option value="800">Standard Package ($800)</option>
-                    <option value="1200">Premium Package ($1200)</option>
-                </select>
-
-                <label for="numberOfPeople">Number of People:</label>
-                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" required>
-
-                <label for="startDate">Select Start Date:</label>
-                <input type="date" id="startDate" name="startDate" required>
-
-                <label for="preferredTime">Preferred Tour Time:</label>
-                <select id="preferredTime" name="preferredTime">
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                </select>
-
-                <label for="discountCode">Discount Code:</label>
-                <input type="text" id="discountCode" name="discountCode">
-
-                <label for="totalCost">Total Cost:</label>
-                <input type="" id="totalCost" name="totalCost"  required>
-                <button type="button" onclick="calculateCost();">Calculate Cost</button>
-
-                <div id="total-cost"></div>
-
-                <button id="registration-btn" type="button" onclick="registerTour();">Register Now</button>
-            </form>
-
-        </div> -->
         <div class="form-container">
             <form id="tourForm">
+                <p>BEST STREET FOOD TOUR MUMBAI</p>
                 <!-- Form fields remain the same -->
                 <label for="tourPackage">Select Tour Package:</label>
                 <select id="tourPackage" name="tourPackage">
-                    <option value="500">Basic Package ($500)</option>
-                    <option value="800">Standard Package ($800)</option>
-                    <option value="1200">Premium Package ($1200)</option>
+                    <option value="48000"> ₹4,800.00</option>
+                    <!-- <option value="800">Standard Package ($800)</option>
+                    <option value="1200">Premium Package ($1200)</option> -->
                 </select>
-        
+
                 <label for="numberOfPeople">Number of People:</label>
-                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" required>
-        
+                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" max="3" onchange="calculateCost()" required>
+
                 <label for="startDate">Select Start Date:</label>
                 <input type="date" id="startDate" name="startDate" required>
-        
+
                 <label for="preferredTime">Preferred Tour Time:</label>
                 <select id="preferredTime" name="preferredTime">
                     <option value="morning">Morning</option>
                     <option value="afternoon">Afternoon</option>
                     <option value="evening">Evening</option>
                 </select>
-        
+
                 <label for="discountCode">Discount Code:</label>
                 <input type="text" id="discountCode" name="discountCode">
-        
+
                 <label for="totalCost">Total Cost:</label>
                 <input type="text" id="totalCost" name="totalCost" required readonly>
-        
+
                 <div id="buttons-container">
-                    <button id="calculate-cost-btn" type="button" onclick="calculateCost();">Calculate Cost</button>
+                                        <!-- <button id="calculate-cost-btn" type="button" onclick="calculateCost();">Calculate Cost</button> -->
+
                     <button id="registration-btn" type="button" onclick="registerTour();">Register Now</button>
                 </div>
-        
+
                 <div id="total-cost-display"></div>
             </form>
         </div>
-    
+
     </div>
 
     <!-- Slider Section-1 End-->
@@ -526,7 +539,7 @@
         <div class="rate-container">
             <div class="user-comment">
                 <!-- Content for the user comment rating box -->
-                <img class="user-image" src="img/button/top-rating-icon.jpg" alt="User Image">
+                <img class="user-image" src="../img/button/top-rating-icon.jpg" alt="User Image">
                 <div class="user-info">
 
                     <h2>Based on 9 rating(s)</h2>
@@ -571,141 +584,139 @@
         <h2>Happy Clients!</h2>
         <div class="comment-box">
             <div class="comment-section">
-                <img class="user-image" src="https://via.placeholder.com/80" alt="User Image">
-            <div class="user-details">
-                <div class="user-name">John Doe</div>
+                <img class="user-image" src="../img/review/r.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Renata Jonczyk</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"The best tour guide I could ever ask for. Very helpful, respectful and friendly. Showed me the best
+                    places."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
             </div>
         </div>
-        <div class="comment-user">
-            <p>"I recently experienced an amazing tour with this guide. The places we visited were breathtaking,
-                and the guide's knowledge added so much value to the entire journey. I highly recommend this tour
-                to anyone looking for a memorable experience!"</p>
-            <div class="rating">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/j.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">JACOB MOYA</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"We just finished our personalized tour and we enjoyed tremendously. We were drove in a very clean
+                    car, with our new friend Sultan driving and AzIz as a tour guide. Their English was very clear and
+                    proper, and the description was higher than our expectations. They never rush us and where always
+                    accommodating to our needs. Strongly recommended"</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/n.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Najmul Khan</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"Abdul was so good with our chefeur Sultan, he was helpful. They did so good with our requirements.
+                    Since we are in rush and with very short time in Mumbai, they made our trip so worthwhile to make
+                    most of the remarkable place in such a short time. Thanks to both of them. We suggest to take their
+                    help if you are in Mumbai."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/a.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Alyson Stein</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"I would highly recommend Fab Mumbai Tours for sightseeing in Mumbai. We did a city tour and an
+                    Elephanta Island tour with them and were very well taken care of. They were extremely knowledgeable,
+                    prompt, and ensured we had everything we needed and saw what we wanted to!
+                    "</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/m.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Mujahed Hussaini</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"I recently had the pleasure of embarking on a trip with Guiders Abdul Aziz and Fahim, and I cannot
+                    express how incredible the experience was! From the moment we started our journey, their warmth,
+                    knowledge, and genuine passion for guiding shone through. Abdul Aziz and Fahim went above and beyond
+                    to ensure every detail of the trip was not only well-planned but also tailored to our preferences.
+
+                    Their expertise and enthusiasm for the destination enriched our adventure, providing insights and
+                    stories that truly enhanced our understanding and appreciation of the places we visited. Whether it
+                    was historical landmarks, local cuisine, or hidden gems off the beaten path, Abdul Aziz and Fahim's
+                    guidance was invaluable."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
             </div>
         </div>
     </div>
-    <div class="comment-box">
-        <div class="comment-section">
-            <img class="user-image" src="https://via.placeholder.com/80" alt="User Image">
-            <div class="user-details">
-                <div class="user-name">John Doe</div>
-            </div>
-        </div>
-        <div class="comment-user">
-            <p>"I recently experienced an amazing tour with this guide. The places we visited were breathtaking,
-                and the guide's knowledge added so much value to the entire journey. I highly recommend this tour
-                to anyone looking for a memorable experience!"</p>
-            <div class="rating">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
-            </div>
-        </div>
-    </div>
-    <div class="comment-box">
-        <div class="comment-section">
-            <img class="user-image" src="https://via.placeholder.com/80" alt="User Image">
-            <div class="user-details">
-                <div class="user-name">John Doe</div>
-            </div>
-        </div>
-        <div class="comment-user">
-            <p>"I recently experienced an amazing tour with this guide. The places we visited were breathtaking,
-                and the guide's knowledge added so much value to the entire journey. I highly recommend this tour
-                to anyone looking for a memorable experience!"</p>
-            <div class="rating">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
-            </div>
-        </div>
-    </div>
-    <div class="comment-box">
-        <div class="comment-section">
-            <img class="user-image" src="https://via.placeholder.com/80" alt="User Image">
-            <div class="user-details">
-                <div class="user-name">John Doe</div>
-            </div>
-        </div>
-        <div class="comment-user">
-            <p>"I recently experienced an amazing tour with this guide. The places we visited were breathtaking,
-                and the guide's knowledge added so much value to the entire journey. I highly recommend this tour
-                to anyone looking for a memorable experience!"</p>
-            <div class="rating">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
-            </div>
-        </div>
-    </div>
-    <div class="comment-box">
-        <div class="comment-section">
-            <img class="user-image" src="https://via.placeholder.com/80" alt="User Image">
-            <div class="user-details">
-                <div class="user-name">John Doe</div>
-            </div>
-        </div>
-        <div class="comment-user">
-            <p>"I recently experienced an amazing tour with this guide. The places we visited were breathtaking,
-                and the guide's knowledge added so much value to the entire journey. I highly recommend this tour
-                to anyone looking for a memorable experience!"</p>
-            <div class="rating">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
-            </div>
-        </div>
-    </div>
-</div>
 
     <!-- Comment Section-7 End -->
 
 
-    <!-- Testimonial Start -->
-
-    <!-- Testimonial End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="https://wa.me/+919930545963" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
-            <img src="img/button/WhatsApp-button.png" alt="WhatsApp Button" class="whatsapp-icon">
-            <!-- <i class="fa fa-whatsapp whatsapp-icon"></i> -->
-        </a>
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-2 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
                     <!-- <a class="btn btn-link" href="">About Us</a>
                     <a class="btn btn-link" href="">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms & Condition</a> -->
-                    <a class="btn btn-link" href="FAQ.html">FAQs & Help</a>
+                    <a class="btn btn-link" href="/FAQ.html">FAQs & Help</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                  <p class="mb-2 footer-address"><i class="fa fa-map-marker-alt me-3"></i>
-                        Metro shopping plaza,
-                        1st floor, shop no. 241, opp.
-                        Delhi Darbar, near Regal
-                        Cinema,
-                        Colaba Causeway, Mumbai-400039
+                    <p class="mb-2 footer-address"><i class="fa fa-map-marker-alt me-3"></i>
+                        Metro shopping plaza, 1st floor, shop no. 241, opp.Delhi Darbar, near
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Regal Cinema, Colaba Causeway, Mumbai-400039
                     </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9930545963</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@fabmumbaitours.com</p>
+                    <p class="mb-2 phone"><i class="fa fa-phone-alt me-3"></i>+91 9930545963</p>
+                    <p class="mb-2 email"><i class="fa fa-envelope me-3"></i>fabmumbaitours@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -713,54 +724,54 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/gallery/img-2.jpeg" alt="">
+                            <img class="img-fluid bg-light p-1" src="/img/gallery/img-2.jpeg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/gallery/img-3.jpeg" alt="">
+                            <img class="img-fluid bg-light p-1" src="/img/gallery/img-3.jpeg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/gallery/img-4.jpeg" alt="">
+                            <img class="img-fluid bg-light p-1" src="/img/gallery/img-4.jpeg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/gallery/img-5.jpeg" alt="">
+                            <img class="img-fluid bg-light p-1" src="/img/gallery/img-5.jpeg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/gallery/img-6.jpeg" alt="">
+                            <img class="img-fluid bg-light p-1" src="/img/gallery/img-6.jpeg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/gallery/img-7.jpeg" alt="">
+                            <img class="img-fluid bg-light p-1" src="/img/gallery/img-7.jpeg" alt="">
                         </div>
                     </div>
                 </div>
-               <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Packages</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/packages/autolady.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/package-1.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/packages/boat-couple.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/package-2.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/packages/taj-front.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/package-3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/packages/cave.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/package-2.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/packages/dinner.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/package-3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/packages/TAIMG_8011-1536x1152.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/package-1.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container">
             <div class="copyright">
                 <div class="row">
@@ -786,23 +797,24 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-solid fa-angle-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/slider.js"></script>
 </body>
 
 </html>

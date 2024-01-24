@@ -33,16 +33,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/contact-form.css">
 
-<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-<script>
-    var wa_btnSetting = { "btnColor": "#86B817", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "left", "whatsAppNumber": "+919930545963", "welcomeMessage": "Hello", "zIndex": 999999, "btnColorScheme": "light" };
-    var wa_widgetSetting = { "title": "fab mumbai tours", "subTitle": "Let's chat here!", "headerBackgroundColor": "#86B817", "headerColorScheme": "dark", "greetingText": "Hi there! \nHow can I help you?", "ctaText": "", "btnColor": "#86B817", "cornerRadius": 40, "welcomeMessage": "Hello", "btnColorScheme": "light", "brandImage": "https://uploads-ssl.webflow.com/5f68a65cd5188c058e27c898/6204c4267b92625c9770f687_whatsapp-chat-widget-dummy-logo.png", "darkHeaderColorScheme": { "title": "#333333", "subTitle": "#4F4F4F" } };
-    window.onload = () => {
-        _waEmbed(wa_btnSetting, wa_widgetSetting);
-    };
-</script>
+</head>
 
 
 <body>
@@ -56,6 +49,7 @@
     <!-- Spinner End -->
 
 
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
@@ -64,7 +58,7 @@
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Metro Shoping Plaza, Colaba,
                         Mumbai</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9930545963</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@fabmumbaitours.com</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>fabmumbaitours@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -99,7 +93,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <div class="nav-item dropdown">
+                     <!-- <div class="nav-item dropdown">
                         <a href="packages.html" class="nav-item nav-link">Packages</a>
                         <div class="dropdown-menu m-0">
                             <a href="BookingPages/mumbai-shore-excrusion.html" class="dropdown-item">Private Mumbai City Tour</a>
@@ -112,16 +106,13 @@
                             <a href="BookingPages/best-street-food-tour.html" class="dropdown-item">Best Street Food Tour Mumbai</a>
                             <a href="BookingPages/dharavi-slums.html" class="dropdown-item">Dharavi Slum Tour In Mumbai</a>
                             <a href="BookingPages/mud-fort.html" class="dropdown-item">The Unbeatable Murud Fort</a>
-                            <!-- <a href="#" class="dropdown-item">Good Morning Mumbai (Mumbai Dawn Tour)</a> -->
-                            <!-- <a href="#" class="dropdown-item">Elephanta Caves Tour &#038; Island Excursion by Speed boat</a> -->
                             <a href="BookingPages/good-night-mumbai.html" class="dropdown-item">Good Night Mumbai | Mumbai Night Tour</a>
-                            <!-- <a href="#" class="dropdown-item">Mumbai City with Bollywood Studio Tour</a> -->
                             <a href="BookingPages/sari-shop.html" class="dropdown-item">Ladies Special Bazar Tour Mumbai</a>
                             <a href="BookingPages/elephanta-caves.html" class="dropdown-item">Elephanta Caves Tour By Public Serry</a>
                         </div>
-                    </div>
-                    <a href="service.html" class="nav-item nav-link active">Services</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div> -->
+                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
+                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
             </div>
         </nav>
@@ -141,171 +132,161 @@
         </div>
     </div>
     <!-- Navbar & Hero End -->
+ 
+    <!-- call button start -->
 
+    <div class="call-button">
+        <a href="tel:+918265025800"><i class="fa fa-solid fa-phone"></i></a>
+    </div>
 
-    <!-- Service Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h1 class="mb-5">Our Services</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- call button end -->
+    
+    <!-- whats-button start -->
+
+    <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
+        <!-- <img src="https://picsum.photos/50" alt="WhatsApp" class="whatsapp-icon"> -->
+        <i class="fab fa-brands fa-whatsapp fw-normal"></i>
+    </div>
+
+    <!-- WhatsApp Contact Panel -->
+    <div id="whatsapp-panel" class="contact-panel">
+        <div class="close-btn" onclick="closePanel()">&times;</div>
+        <div class="panel-header">
+            <p>Chat with us</p>
+            <P>Get in contact with our representatives</P>
         </div>
-    </div> -->
-    <!-- Service End -->
+        <div class="contact-container">
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 1">
+                <div class="contact-details">
+                    <p class="p-color">Fahim</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
+                </div>
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Clients Say!!!</h1>
             </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 2">
+                <div class="contact-details">
+                    <p class="p-color">Bernice</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
                 </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
+            </div>
+            <div class="contact-item" onclick="openWhatsApp(+918265025800)">
+                <img src="img/button/man-icon-png.png" alt="Contact 3">
+                <div class="contact-details">
+                    <p class="p-color">mak</p>
+                    <P>support</P>
+                    <!-- <p class="online-p">I'm online</p> -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+
+    <!-- whats-button end -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h1 class="mb-5">Contact For Any Query</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Get In Touch</h5>
+                    <p class="mb-4">
+                        Your inquiries are not merely messages to us; they're opportunities to build meaningful
+                        connections.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Office</h5>
+                            <p class="mb-0">Metro shopping plaza, 1st floor, shop no.241, opp. delhi darbar, near regal
+                                cinema, colaba causeway, mumbai-400039
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+91 9930545963</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">fabmumbaitours@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482633.0404997888!2d72.55150444305367!3d19.08260679278387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1d691f0dfd38ddd%3A0xb72e848bb352e32f!2sFab%20Mumbai%20Tours!5e0!3m2!1sen!2sin!4v1705293923299!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfa2rF0fv7nPpP_6WKl0ryXkAG4SGYjFv3dlLKvnZPRlme0lQ/viewform?usp=sf_link" method="POST">
+                        <label for="name">Full Name :</label>
+                        <input type="text" placeholder="Enter Your Name" id="name" name="entry.1797464660">
+                        <br>
+    
+                        <label for="email">Email :</label>
+                        <input type="email" placeholder="Enter Your Email Address" id="email" name="entry.662267671">
+                        <br>    
+    
+                        <label for="message">Message :</label>
+                        <textarea name="entry.1075845331" id="message" cols="39" rows="5" placeholder="Enter Your Message"></textarea>
+                        <br>
+                        
+                        <button id="btn" onclick="submitForm()">Send</button>
+                       </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        
+   <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-2 col-md-6">
                     <h4 class="text-white mb-3">Company</h4>
-                    <!-- <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a> -->
                     <a class="btn btn-link" href="FAQ.html">FAQs & Help</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                  <p class="mb-2 footer-address"><i class="fa fa-map-marker-alt me-3"></i>
-                        Metro shopping plaza,
-                        1st floor, shop no. 241, opp.
-                        Delhi Darbar, near Regal
-                        Cinema,
-                        Colaba Causeway, Mumbai-400039
+                    <p class="mb-2 footer-address"><i class="fa fa-map-marker-alt me-3"></i>
+                        Metro shopping plaza, 1st floor, shop no. 241, opp.Delhi Darbar, near
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Regal Cinema, Colaba Causeway, Mumbai-400039
                     </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9930545963</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@fabmumbaitours.com</p>
+                    <p class="mb-2 phone"><i class="fa fa-phone-alt me-3"></i>+91 9930545963</p>
+                    <p class="mb-2 email"><i class="fa fa-envelope me-3"></i>fabmumbaitours@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                 </div>
-                <div class="col-lg-3 col-md-6">
+                </div>
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
@@ -328,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-               <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Packages</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
@@ -350,14 +331,14 @@
                             <img class="img-fluid bg-light p-1" src="img/packages/TAIMG_8011-1536x1152.jpg" alt="">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">MumbaiTourist.com</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">fabmumbaitours.com</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://mujahedh.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://mujahedh.com">Mujahed H</a>
@@ -374,11 +355,12 @@
             </div>
         </div>
     </div>
+
     <!-- Footer End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
@@ -394,6 +376,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <!-- <script src="js/contact-form.js"></script> -->
 </body>
 
 </html>

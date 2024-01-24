@@ -1,35 +1,24 @@
-function postToGoogle() {
-    // var field1 = $("input[type='text'][name='name']").val();
-    var name = $('#name').val();
-    var email = $('#email').val();
-    var message = $('#message').val();
+function submitForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
-    $.ajax({
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSdjOTKRb7YiWi8OGPq6M6CRL0TpuAsUKacKp2XgruMbIp4wzg/formResponse",
-      data: {
-        "entry.924752166": name,
-        "entry.997497831": email,
+    // Replace 'YOUR_GOOGLE_FORM_URL' with your actual Google Form URL
+    var googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfa2rF0fv7nPpP_6WKl0ryXkAG4SGYjFv3dlLKvnZPRlme0lQ/viewform?usp=sf_link';
 
-      },
-      type: "POST",
-      dataType: "xml",
-      statusCode: {
-        0: function() {
-          //Success message
-        },
-        200: function() {
-          //Success Message
-        }
-      }
+    var formData = new FormData();
+    formData.append('entry.1797464660', name);
+    formData.append('entry.662267671', email);
+    formData.append('entry.1075845331', message);
+
+    fetch(googleFormUrl, {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => {
+        console.log('Form submitted successfully:', response);
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
     });
-  }
- 
- /* 
- $(document).ready(function() {
-    $('#form').submit(function() {
-      postToGoogle();
-      return false;
-    });
-    
- });
- */
+}
