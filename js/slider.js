@@ -39,7 +39,7 @@ function showSlides(n) {
 
 function calculateCost() {
   var tourPackage = parseInt(document.getElementById('tourPackage').value);
-  var numberOfPeople= parseFloat(document.getElementById('numberOfPeople').value);
+  var numberOfPeople = parseFloat(document.getElementById('numberOfPeople').value);
 
   if (isNaN(tourPackage) || isNaN(numberOfPeople)) {
     alert('Please enter valid numbers for quantity and price.');
@@ -82,7 +82,7 @@ function registerTour() {
   var discountCode = document.getElementById("discountCode").value;
   var totalCost = document.getElementById("totalCost").value;
 
-  var phoneNumber ="+918265025800"
+  var phoneNumber = "+918265025800"
 
 
   var messageText = `
@@ -94,14 +94,25 @@ function registerTour() {
   Total Cost: ${totalCost}
 `;
 
-// Construct the WhatsApp message URL
-var phoneNumber = "+918265025800";
-var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(messageText);
+  // Construct the WhatsApp message URL
+  var phoneNumber = "+918265025800";
+  var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(messageText);
 
-// Open WhatsApp window
-window.open(url, "_blank").focus();
+  // Open WhatsApp window
+  window.open(url, "_blank").focus();
 
 }
+
+// // Set the minimum date to today
+// document.addEventListener("DOMContentLoaded", function () {
+//   var today = new Date();
+//   var dd = String(today.getDate()).padStart(2, '0');
+//   var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+//   var yyyy = today.getFullYear();
+
+//   today = yyyy + '-' + mm + '-' + dd;
+//   document.getElementById('startDate').min = today;
+// });
 
 
 // whats-app button
@@ -120,7 +131,7 @@ function closePanel() {
 function openWhatsApp(phoneNumber) {
   var text = `
   Tour Package:`;
-  var whatsappLink = 'https://wa.me/' + phoneNumber +"?text" + encodeURIComponent(text); ;
+  var whatsappLink = 'https://wa.me/' + phoneNumber + "?text" + encodeURIComponent(text);;
   window.open(whatsappLink, '_blank');
 }
 
