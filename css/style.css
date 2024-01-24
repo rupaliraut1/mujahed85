@@ -674,7 +674,7 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .slider-container {
-    position: relative;
+position: relative;
 margin: 10% 5%;
 overflow: hidden;
 border-radius: 8px;
