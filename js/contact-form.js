@@ -4,12 +4,12 @@ function submitForm() {
     var message = document.getElementById('message').value;
 
     // Replace 'YOUR_GOOGLE_FORM_URL' with your actual Google Form URL
-    var googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfa2rF0fv7nPpP_6WKl0ryXkAG4SGYjFv3dlLKvnZPRlme0lQ/viewform?usp=sf_link';
+    var googleFormUrl = 'https://script.google.com/macros/s/AKfycbxy6pKGCYpdL6g42pP4CL3w7whuuT70fzFfeLNCG6fDQrpxzfiucVDzWODb7wh3kAV9qg/exec';
 
     var formData = new FormData();
-    formData.append('entry.1797464660', name);
-    formData.append('entry.662267671', email);
-    formData.append('entry.1075845331', message);
+    formData.append('entry.1777579499', name);
+    formData.append('entry.878578141', email);
+    formData.append('entry.992318106', message);
 
     fetch(googleFormUrl, {
         method: 'POST',
@@ -18,6 +18,7 @@ function submitForm() {
     .then(response => {
         console.log('Form submitted successfully:', response);
     })
+    
     .catch(error => {
         console.error('Error submitting form:', error);
     });
