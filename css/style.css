@@ -651,17 +651,17 @@
 
 
 .container-wrapper {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    overflow: hidden;
-    margin: 5%;
-    padding: 1em 2em;
+    background-color: #ffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    background: #ffff;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    box-shadow: 0 0 10px #0000001a;
+    margin: 10px 5%;
 }
+
 
 .slideshow-container,
 .form-container {
@@ -889,7 +889,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     /* Allow items to wrap to the next line */
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .slideshow-container,
