@@ -4,22 +4,22 @@ function submitForm() {
     var message = document.getElementById('message').value;
 
     // Replace 'YOUR_GOOGLE_FORM_URL' with your actual Google Form URL
-    var googleFormUrl = 'https://script.google.com/macros/s/AKfycbwzIUU4BZIS57z2GH-wL587eKreV2ljc_mRDGzCBTjrgd3qjhUVXTFYwcGQfgOag2p6qA/exec';
+    var googleFormUrl = 'https://script.google.com/macros/s/AKfycbzdxpGy9GYKsYN2-4oX7wepl8gGjsqBNEoU_zO0ajcda42gjWkiImzA9YBDWCR7s42kSA/exec';
 
     var formData = new FormData();
     formData.append('entry.1439917167', name);
     formData.append('entry.5816732', email);
     formData.append('entry.2054302966', message);
-
     fetch(googleFormUrl, {
         method: 'POST',
         body: formData,
     })
     .then(response => {
-        console.log('Form submitted successfully:', response);
+        //console.log('Form submitted successfully:', response);
+        alert("Form submitted successfully!");
     })
-    
     .catch(error => {
-        console.error('Error submitting form:', error);
+        //console.error('Error submitting form:', error);
+        alert("Error submitting form. Please try again later.");
     });
 }
