@@ -4,7 +4,7 @@ function submitForm() {
     var message = document.getElementById('message').value;
 
     // Replace 'YOUR_GOOGLE_FORM_URL' with your actual Google Form URL
-    var googleFormUrl = 'https://script.google.com/macros/s/AKfycbztLSX2FThihgGsPmXRyELBTHrftiMZSarwsWAAHuTTIo-tx_tSxky6qeVGFkMDig2_Jg/exec';
+    var googleFormUrl = 'https://script.google.com/macros/s/AKfycbwzIUU4BZIS57z2GH-wL587eKreV2ljc_mRDGzCBTjrgd3qjhUVXTFYwcGQfgOag2p6qA/exec';
 
     var formData = new FormData();
     formData.append('entry.1439917167', name);
