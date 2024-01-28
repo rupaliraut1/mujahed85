@@ -95,26 +95,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="packages.html" class="nav-item nav-link">Packages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="BookingPages/mumbai-shore-excrusion.html" class="dropdown-item">Private Mumbai City Tour</a>
-                            <a href="BookingPages/bollywood-studio-tour.html" class="dropdown-item">Bollywood Studio Tour</a>
-                            <a href="BookingPages/toaur-by-speed-boat.html" class="dropdown-item">Elephanta Caves Tour</a>
-                            <a href="BookingPages/group-city-tour.html" class="dropdown-item">Mumbai on Wheels Group City Tour</a>
-                            <a href="BookingPages/good-morning-mumbai.html" class="dropdown-item">Good Morning Mumbai</a>
-                            <a href="BookingPages/party.html" class="dropdown-item">Party All Night (Pub/club crawl)</a>
-                            <a href="BookingPages/elephanta-caves.html" class="dropdown-item">Mumbai City Tour with Elephanta Tour</a>
-                            <a href="BookingPages/best-street-food-tour.html" class="dropdown-item">Best Street Food Tour Mumbai</a>
-                            <a href="BookingPages/dharavi-slums.html" class="dropdown-item">Dharavi Slum Tour In Mumbai</a>
-                            <a href="BookingPages/mud-fort.html" class="dropdown-item">The Unbeatable Murud Fort</a>
-                            <a href="BookingPages/good-night-mumbai.html" class="dropdown-item">Good Night Mumbai | Mumbai Night Tour</a>
-                            <a href="BookingPages/sari-shop.html" class="dropdown-item">Ladies Special Bazar Tour Mumbai</a>
-                            <a href="BookingPages/elephanta-caves.html" class="dropdown-item">Elephanta Caves Tour By Public Serry</a>
-                        </div>
-                    </div> -->
-                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
+                   
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+
+                    <select id="currencySelector" class="nav-item nav-link" onchange="convertCurrency()">
+                        <option value="INR">Indian Rupees (INR)</option>
+                        <option value="USD">US Dollars (USD)</option>
+                      </select>
                 </div>
             </div>
         </nav>
@@ -270,7 +257,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 7-8 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹10,300.00</h3>
+                                <h3 class="price convertible">₹10,300.00</h3>
                                 <a href="booking-pages-samples/best-street-food-tour.html">
                                 <button class="book-btn">Book Now</button></a>
                             </div>
@@ -292,7 +279,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 7-8 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹10,300.00</h3>
+                                <h3 class="price convertible">₹10,300.00</h3>
                                 <a href="booking-pages-samples/lindas-booking.html">
                                 <button class="book-btn">Book Now</button></a>
                             </div>
@@ -315,7 +302,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 7-8 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹10,050.00</h3>
+                                <h3 class="price convertible">₹10,050.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -337,7 +324,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 7-8 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹7,150.00</h3>
+                                <h3 class="price convertible">₹7,150.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -359,7 +346,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 7-8 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹10,300.00</h3>
+                                <h3 class="price convertible">₹10,300.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -381,7 +368,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 3-5 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹6,950.00</h3>
+                                <h3 class="price convertible">₹6,950.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -403,7 +390,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 3-4 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹8,950.00</h3>
+                                <h3 class="price convertible">₹8,950.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -425,7 +412,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 3 - 4 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹4,750.00</h3>
+                                <h3 class="price convertible">₹4,750.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -445,7 +432,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 3 - 5 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹6,150.00</h3>
+                                <h3 class="price convertible">₹6,150.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -465,7 +452,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 5 - 6 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹8,550.00</h3>
+                                <h3 class="price convertible">₹8,550.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -485,7 +472,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 8 - 9 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹9,500.00</h3>
+                                <h3 class="price convertible">₹9,500.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -505,7 +492,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 5 - 6 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹7,150.00</h3>
+                                <h3 class="price convertible">₹7,150.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -525,7 +512,7 @@
                                 <i class="fa fa-regular fa-clock me-2 time"> 1 - 2 hours</i>
                             </div>
                             <div class="mb-5 d-flex justify-content-around">
-                                <h3 class="price">₹4,200.00</h3>
+                                <h3 class="price convertible">₹4,200.00</h3>
                                 <button class="book-btn">Book Now</button>
                             </div>
                         </div>
@@ -784,6 +771,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/currency.js"></script>
 
 </body>
 
