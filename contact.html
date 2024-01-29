@@ -93,7 +93,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                     <!-- <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="packages.html" class="nav-item nav-link">Packages</a>
                         <div class="dropdown-menu m-0">
                             <a href="BookingPages/mumbai-shore-excrusion.html" class="dropdown-item">Private Mumbai City Tour</a>
@@ -132,7 +132,7 @@
         </div>
     </div>
     <!-- Navbar & Hero End -->
- 
+
     <!-- call button start -->
 
     <div class="call-button">
@@ -140,7 +140,7 @@
     </div>
 
     <!-- call button end -->
-    
+
     <!-- whats-button start -->
 
     <div id="whatsapp-button" class="floating-button" onclick="openPanel()">
@@ -243,19 +243,19 @@
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <form id="contactForm" action="index.html" method="POST">
                         <label for="name">Full Name :</label>
-                        <input type="text" placeholder="Enter Your Name" id="name" name="entry.1439917167">
+                        <input type="text" placeholder="Enter Your Name" id="name" name="entry.1439917167" autocomplete="name">
                         <br>
-    
+                    
                         <label for="email">Email :</label>
-                        <input type="email" placeholder="Enter Your Email Address" id="email" name="entry.5816732">
-                        <br>    
-    
-                        <label for="message">Message :</label>
-                        <textarea name="entry.2054302966" id="message" cols="39" rows="5" placeholder="Enter Your Message"></textarea>
+                        <input type="email" placeholder="Enter Your Email Address" id="email" name="entry.5816732" autocomplete="email">
                         <br>
-                        
+                    
+                        <label for="message">Message :</label>
+                        <textarea name="entry.2054302966" id="message" cols="39" rows="5" placeholder="Enter Your Message" autocomplete="message"></textarea>
+                        <br>
+                    
                         <button id="btn" onclick="submitForm(event)">Send</button>
-                       </form>
+                    </form>
                 </div>
             </div>
         </div>
@@ -263,7 +263,7 @@
     <!-- Contact End -->
 
     <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-2 col-md-6">
