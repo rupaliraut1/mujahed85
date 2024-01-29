@@ -30,7 +30,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -133,7 +133,7 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                      <a href="../index.html" class="navbar-brand p-0">
+            <a href="../index.html" class="navbar-brand p-0">
                 <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>FAB</h1> -->
                 <h1 class="text-primary m-0"><img src="../img/logo/fab-logo.png" class="my-logo me-3"></h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
@@ -164,8 +164,14 @@
                     </div> -->
                     <!-- <a href="../service.html" class="nav-item nav-link">Services</a> -->
                     <a href="../contact.html" class="nav-item nav-link">Contact</a>
+
+                    <select id="currencySelector" onchange="convertCurrency()">
+                        <option value="INR">Indian Rupees (INR)</option>
+                        <option value="USD">US Dollars (USD)</option>
+                    </select>
                 </div>
             </div>
+
         </nav>
 
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
@@ -178,7 +184,8 @@
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">MUMBAI TOURS & EXCURSIONS</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">BEST STREET FOOD TOUR MUMBAI</li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">BEST STREET FOOD TOUR
+                                    MUMBAI</li>
                             </ol>
                         </nav>
                     </div>
@@ -270,13 +277,14 @@
                 <!-- Form fields remain the same -->
                 <label for="tourPackage">Select Tour Package:</label>
                 <select id="tourPackage" name="tourPackage">
-                    <option value="48000"> ₹4,800.00</option>
+                    <option value="48000" class="convertible"> ₹4,800.00</option>
                     <!-- <option value="800">Standard Package ($800)</option>
                     <option value="1200">Premium Package ($1200)</option> -->
                 </select>
 
                 <label for="numberOfPeople">Number of People:</label>
-                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" max="3" onchange="calculateCost()" required>
+                <input type="number" id="numberOfPeople" name="numberOfPeople" min="1" max="3"
+                    onchange="calculateCost()" required>
 
                 <label for="startDate">Select Start Date:</label>
                 <input type="date" id="startDate" name="startDate" required>
@@ -292,10 +300,10 @@
                 <input type="text" id="discountCode" name="discountCode">
 
                 <label for="totalCost">Total Cost:</label>
-                <input type="text" id="totalCost" name="totalCost" required readonly>
+                <input type="number" id="totalCost"  name="totalCost" required readonly>
 
                 <div id="buttons-container">
-                                        <!-- <button id="calculate-cost-btn" type="button" onclick="calculateCost();">Calculate Cost</button> -->
+                    <!-- <button id="calculate-cost-btn" type="button" onclick="calculateCost();">Calculate Cost</button> -->
 
                     <button id="registration-btn" type="button" onclick="registerTour();">Register Now</button>
                 </div>
@@ -772,22 +780,24 @@
                 </div>
             </div>
         </div> -->
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">MumbaiTourist.com</a>, All Right Reserved.
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="#">MumbaiTourist.com</a>, All Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://mujahedh.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://mujahedh.com">Mujahed H</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!-- <div class="footer-menu">
+                                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://mujahedh.com/credit-removal". Thank you for your support. ***/-->
+                                Designed By <a class="border-bottom" href="https://mujahedh.com">Mujahed H</a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <!-- <div class="footer-menu">
                             <a href="">Home</a>
                             <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>
                         </div> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -815,6 +825,56 @@
     <script src="../js/main.js"></script>
     <script src="../js/slider.js"></script>
     <script src="../js/slider.js"></script>
+
+    <script>
+        let originalValues = {};
+
+        // Save original values
+        function saveOriginalValues() {
+            const elements = document.querySelectorAll('.convertible');
+            elements.forEach(element => {
+                const currencyType = element.getAttribute('data-currency');
+                const originalValue = element.innerText;
+                originalValues[currencyType] = originalValue;
+            });
+        }
+
+        // Convert values based on selected currency
+        function convertCurrency() {
+            const currencySelector = document.getElementById('currencySelector');
+            const selectedCurrency = currencySelector.value;
+
+            const elements = document.querySelectorAll('.convertible');
+            elements.forEach(element => {
+                const currencyType = element.getAttribute('data-currency');
+                const originalValue = originalValues[currencyType];
+
+                if (selectedCurrency === 'USD') {
+                    const convertedValue = parseFloat(originalValue.replace(/[^\d.]/g, '')) / 75.0; // Assuming 1 INR = 0.0133 USD
+                    element.innerText = `${currencyType === 'USD' ? '$' : '₹'}${convertedValue.toFixed(2)}`;
+                    element.classList.add('converted-value');
+                } else {
+                    element.innerText = originalValue;
+                    element.classList.remove('converted-value');
+                }
+            });
+        }
+
+        // Revert values to original
+        function revertToOriginal() {
+            const elements = document.querySelectorAll('.convertible');
+            elements.forEach(element => {
+                const currencyType = element.getAttribute('data-currency');
+                const originalValue = originalValues[currencyType];
+                element.innerText = originalValue;
+                element.classList.remove('converted-value');
+            });
+        }
+
+        // Initial setup
+        saveOriginalValues();
+    </script>
+
 </body>
 
 </html>
