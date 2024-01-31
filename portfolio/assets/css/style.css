@@ -554,6 +554,22 @@ section {
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  list-style: none;
+}
+.resum .resume-item li img { 
+  max-height: 20px !important;
+  width: 15px;
+  object-fit: cover;
+  /* Set the max height to match your font size */
+  margin-right: 20px;
+  /* Adjust spacing between image and text as needed */
+}
+
+.client-logo {
+  max-height: 5em;
+  width: 5em;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
 .resume .resume-item:last-child {
