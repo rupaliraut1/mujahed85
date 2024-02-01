@@ -32,6 +32,9 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+p{
+  font-size: 1em;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -1222,4 +1225,12 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+
+/* nubeera changes */
+
+.my-flex{
+  display: flex;
+  justify-content: center !important;
 }
