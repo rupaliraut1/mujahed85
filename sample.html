@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Currency Converter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="convertBtn">Convert Currency</button>
+
+    <script>
+
+        document.getElementById('convertBtn').addEventListener('click', function () {
+            const storedRates = localStorage.getItem('exchangeRates');
+
+            if (storedRates) {
+                // If exchange rates are already stored, use them
+                const rates = JSON.parse(storedRates);
+                showConversionAlert(rates);
+            } else {
+                // Fetch exchange rates if not stored
+                fetchExchangeRates();
+            }
+        });
+
+        function fetchExchangeRates() {
+            // Simulate API call
+            setTimeout(() => {
+                const fakeRates = {
+                    base: 'USD',
+                    rates: {
+                        EUR: 0.85, // Example exchange rate
+                        GBP: 0.75,
+                        JPY: 110.0,
+                    },
+                };
+
+                // Save rates to local storage
+                localStorage.setItem('exchangeRates', JSON.stringify(fakeRates));
+
+                // Display conversion alert
+                showConversionAlert(fakeRates);
+            }, 1000); // Simulate a delay as if fetching from an API
+        }
+
+        function showConversionAlert(data) {
+            const conversionRate = data.rates.EUR; // You can change EUR to any other currency
+            alert(`1 USD is approximately ${conversionRate.toFixed(2)} ${data.base}`);
+        }
+    </script>
+</body>
+
+</html>

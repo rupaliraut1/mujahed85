@@ -24,6 +24,21 @@
 
 
 /*** Spinner ***/
+
+.currency-btn
+{
+    background-color: #4caf50;
+    color: #fff;
+    height: 10vh;
+    /* width: 10vw; */
+    padding: 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
 #spinner {
     opacity: 0;
     visibility: hidden;

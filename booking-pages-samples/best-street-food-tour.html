@@ -142,6 +142,7 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="../index.html" class="nav-item nav-link active">Home</a>
                     <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                    <button type="button" onclick="convertCurrency()">Convert to USD</button>
                 </div>
             </div>
         </nav>
@@ -247,7 +248,7 @@
                 <label for="tourPackage">Select Tour Package:</label>
                 <select id="tourPackage" name="tourPackage" name="entry.101712364">
                     <option value="select">Select</option>
-                    <option value="48000"> ₹4,800.00</option>
+                    <option value="48000" class="convertible"> ₹4,800.00</option>
                 </select>
 
                 <label for="numberOfPeople">Number of People:</label>
@@ -270,10 +271,11 @@
                 </select>
 
                 <label for="discountCode">Discount Code:</label>
-                <input type="text" id="discountCode" name="discountCode" name="entry.831696633">
+                <input type="text" id="discountCode" name="discountCode" class="convertible" name="entry.831696633">
 
                 <label for="totalCost">Total Cost:</label>
-                <input type="text" id="totalCost" name="totalCost" name="entry.1768228878" required readonly>
+                <!-- <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" required readonly> -->
+                <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" data-original="₹4,800.00" required readonly>
 
                 <div id="buttons-container">
                     <button id="registration-btn" type="button" onclick="registerTour(event);">Register Now</button>
@@ -749,6 +751,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/slider.js"></script>
     <script src="../js/booking-page.js"></script>
+    <script src="../js/currency.js"></script>
 </body>
 
 </html>
