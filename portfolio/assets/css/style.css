@@ -1275,7 +1275,7 @@ p {
 }
 
 .resume-title .icon-size{
-  padding-left: 3px;
+  padding-left: 5px;
   height: 35px;
   width: 35px;
   border-radius: 50px;
@@ -1284,6 +1284,6 @@ p {
   margin-right: 20px;
 }
 .resume-title .icon-size i{
-  font-size: .8em;
+  font-size: 16px;
   margin-right: 5px;
 }
