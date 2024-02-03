@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout with Slider and A4 Slide</title>
+    <style>
+        body, html {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Prevent scrolling outside of main-content and sidebar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            height: calc(100vh - 40px); /* Subtracting header height */
+        }
+
+        #sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .sidebar-link {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            background-color: #555;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-link:hover {
+            background-color: #777;
+        }
+
+        #main-content {
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            margin-left: 200px;
+            position: relative;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            justify-content: flex-start;
+            /* Adjusted to start from the left */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .instructions {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        #prev,
+        #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+
+        .back-to-home {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to the Two Column Layout with Slider and A4 Slide</h1>
+        <a href="index.html" class="back-to-home">Back to Home</a>
+    </header>
+
+    <div id="container">
+        <div id="sidebar">
+            <!-- Updated sidebar links with data-slide attributes -->
+            <a href="#" class="sidebar-link" data-slide="0">Slide 1</a>
+            <a href="#" class="sidebar-link" data-slide="1">Slide 2</a>
+            <a href="#" class="sidebar-link" data-slide="2">Slide 3</a>
+            <a href="#" class="sidebar-link" data-slide="3">Slide 4</a>
+            <a href="#" class="sidebar-link" data-slide="4">Slide 5</a>
+            <a href="#" class="sidebar-link" data-slide="5">Slide 6</a>
+        </div>
+
+        <div id="main-content">
+            <div class="slider-container">
+                <div class="slides">
+                    <!-- Add more slides as needed -->
+                    <div id="slide1" class="slide">
+                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <div class="instructions">
+                            <h2>Instructions:</h2>
+                            <p>This is a sample slide with an A4 size layout.</p>
+                            <p>Feel free to replace the image and instructions with your own content.</p>
+                        </div>
+                    </div>
+                    <div id="slide2" class="slide">
+                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <div class="instructions">
+                            <h2>Instructions:</h2>
+                            <p>This is a sample slide with an A4 size layout.</p>
+                            <p>Feel free to replace the image and instructions with your own content.</p>
+                        </div>
+                    </div>
+                    <div id="slide3" class="slide">
+                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <div class="instructions">
+                            <h2>Instructions:</h2>
+                            <p>This is a sample slide with an A4 size layout.</p>
+                            <p>Feel free to replace the image and instructions with your own content.</p>
+                        </div>
+                    </div>
+                    <div id="slide4" class="slide">
+                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <div class="instructions">
+                            <h2>Instructions:</h2>
+                            <p>This is a sample slide with an A4 size layout.</p>
+                            <p>Feel free to replace the image and instructions with your own content.</p>
+                        </div>
+                    </div>
+                    <div id="slide5" class="slide">
+                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <div class="instructions">
+                            <h2>Instructions:</h2>
+                            <p>This is a sample slide with an A4 size layout.</p>
+                            <p>Feel free to replace the image and instructions with your own content.</p>
+                        </div>
+                    </div>
+                    <div id="slide6" class="slide">
+                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <div class="instructions">
+                            <h2>Instructions:</h2>
+                            <p>This is a sample slide with an A4 size layout.</p>
+                            <p>Feel free to replace the image and instructions with your own content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="prev">&lt;</div>
+            <div id="next">&gt;</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelector(".slides");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+            const sidebarLinks = document.querySelectorAll(".sidebar-link");
+
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                currentIndex = index;
+                const translateValue = -index * 100 + "%";
+                slides.style.transform = "translateX(" + translateValue + ")";
+                toggleButtons();
+            }
+
+            function navigateSlide(event) {
+                event.preventDefault();
+                const slideIndex = parseInt(event.target.getAttribute("data-slide"), 10);
+                showSlide(slideIndex);
+            }
+
+            function toggleButtons() {
+                prevButton.style.display = currentIndex === 0 ? "none" : "block";
+                nextButton.style.display =
+                    currentIndex === slides.children.length - 1 ? "none" : "block";
+            }
+
+            prevButton.addEventListener("click", function () {
+                if (currentIndex > 0) {
+                    showSlide(currentIndex - 1);
+                }
+            });
+
+            nextButton.addEventListener("click", function () {
+                if (currentIndex < slides.children.length - 1) {
+                    showSlide(currentIndex + 1);
+                }
+            });
+
+            // Attach click event to sidebar links
+            sidebarLinks.forEach(function (link) {
+                link.addEventListener("click", navigateSlide);
+            });
+
+            // Initial toggle for buttons
+            toggleButtons();
+        });
+    </script>
+
+</body>
+
+</html>
