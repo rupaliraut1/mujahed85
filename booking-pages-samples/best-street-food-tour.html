@@ -30,7 +30,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -132,7 +132,7 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                      <a href="../index.html" class="navbar-brand p-0">
+            <a href="../index.html" class="navbar-brand p-0">
                 <h1 class="text-primary m-0"><img src="../img/logo/fab-blue.png" class="my-logo me-3"></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -142,7 +142,9 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="../index.html" class="nav-item nav-link active">Home</a>
                     <a href="../contact.html" class="nav-item nav-link">Contact</a>
-                    <button type="button" onclick="convertCurrency()">Convert to USD</button>
+
+                    <button type="button" id="convertCurrencyBtn">Convert to USD</button>
+                    <!-- <button id="convertCurrencyBtn" onclick="convertCurrency()">Convert Currency</button> -->
                 </div>
             </div>
         </nav>
@@ -157,7 +159,8 @@
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">MUMBAI TOURS & EXCURSIONS</a></li>
-                                <li class="breadcrumb-item text-white" aria-current="page">BEST STREET FOOD TOUR MUMBAI</li>
+                                <li class="breadcrumb-item text-white" aria-current="page">BEST STREET FOOD TOUR MUMBAI
+                                </li>
                             </ol>
                         </nav>
                     </div>
@@ -252,7 +255,8 @@
                 </select>
 
                 <label for="numberOfPeople">Number of People:</label>
-                <select id="numberOfPeople" name="numberOfPeople" name="entry.626323194" onchange="calculateCost()" required>
+                <select id="numberOfPeople" name="numberOfPeople" name="entry.626323194" onchange="calculateCost()"
+                    required>
                     <option value="select">Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -260,7 +264,8 @@
                 </select>
 
                 <label for="startDate">Select Start Date:</label>
-                <input type="date" id="startDate" name="startDate" name="entry.1180521769_day, entry.1180521769_month, entry.1180521769_year" required>
+                <input type="date" id="startDate" name="startDate"
+                    name="entry.1180521769_day, entry.1180521769_month, entry.1180521769_year" required>
 
                 <label for="preferredTime">Preferred Tour Time:</label>
                 <select id="preferredTime" name="preferredTime" name="entry.236059718">
@@ -274,8 +279,7 @@
                 <input type="text" id="discountCode" name="discountCode" class="convertible" name="entry.831696633">
 
                 <label for="totalCost">Total Cost:</label>
-                <!-- <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" required readonly> -->
-                <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" data-original="₹4,800.00" required readonly>
+                <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" required readonly>
 
                 <div id="buttons-container">
                     <button id="registration-btn" type="button" onclick="registerTour(event);">Register Now</button>
@@ -723,36 +727,37 @@
                         </div>
                     </div>
                 </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">MumbaiTourist.com</a>, All Right Reserved.
-                        Designed By <a class="border-bottom" href="https://mujahedh.com">NubeEra Technologies</a>
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="#">MumbaiTourist.com</a>, All Right Reserved.
+                                Designed By <a class="border-bottom" href="https://mujahedh.com">NubeEra
+                                    Technologies</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+            <!-- Footer End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../lib/wow/wow.min.js"></script>
+            <script src="../lib/easing/easing.min.js"></script>
+            <script src="../lib/waypoints/waypoints.min.js"></script>
+            <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="../lib/tempusdominus/js/moment.min.js"></script>
+            <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+            <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
-    <script src="../js/slider.js"></script>
-    <script src="../js/form.js"></script>
-    <script src="../js/booking-page.js"></script>
-    <script src="../js/currency.js"></script>
+            <!-- Template Javascript -->
+            <script src="../js/main.js"></script>
+            <script src="../js/slider.js"></script>
+            <script src="../js/form.js"></script>
+            <script src="../js/booking-page.js"></script>
+            <script src="../js/currency.js"></script>
 </body>
 
 </html>
