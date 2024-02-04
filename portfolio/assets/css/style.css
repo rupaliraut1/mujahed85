@@ -1288,16 +1288,22 @@ p {
   margin-right: 5px;
 }
 
-/* .icon-position li 
+  .icon-position {
+    text-align: center;
+    margin-left: 2.5em;
+  } 
+  .icon-position li 
 {
     list-style-type: none;
     padding: 10px;
-    display: flex;
-    justify-content: space-around;
-}
+    /* display: flex;
+    justify-content: space-around; */
+    text-align: left;
+} 
 
 .icon-position li i
 {
     font-size: 23px;
-    width: 20px;
-} */
+    /* width: 20px; */
+    margin-right: 20px;
+}
