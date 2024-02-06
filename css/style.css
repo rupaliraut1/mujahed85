@@ -30,7 +30,7 @@
     background-color: #4caf50;
     color: #fff;
     height: 10vh;
-    /* width: 10vw; */
+    width: 10vw;
     padding: 2px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -93,9 +93,41 @@
 
 
 /*** Navbar ***/
+
+/* currency-btn-start */
+.currency-btn {
+    margin: 33px 0px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    width: 116px;
+    height: 7vh;
+    transition: background-color 0.3s;
+  }
+  
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .currency-btn {
+      font-size: 14px;
+      width: 125px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .currency-btn {
+      font-size: 12px;
+      width: 100px;
+    }
+  }
+/* currency-btn-end */
+
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
     position: relative;
+    margin-top: 12px;
     margin-right: 25px;
     padding: 35px 0;
     color: #FFFFFF !important;
@@ -106,7 +138,7 @@
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 20px 0;
+    padding: 22px 0;
     color: var(--dark) !important;
 }
 
