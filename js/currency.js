@@ -77,61 +77,61 @@
     // _______________________IT IS SHOW VALUE CORRECT BUT NOT SHOW IN TOTAL COST____________________________________________________________
 
     
-    // function convertCurrency() {
-    //     // Define the fixed exchange rate
-    //     var exchangeRate = 83;
+    function convertCurrency() {
+        // Define the fixed exchange rate
+        var exchangeRate = 83;
 
-    //     // Get all elements with the class 'convertible'
-    //     var convertibleElements = document.querySelectorAll('.convertible');
+        // Get all elements with the class 'convertible'
+        var convertibleElements = document.querySelectorAll('.convertible');
 
-    //     // Toggle the currency conversion
-    //     var converted = document.body.getAttribute('data-converted');
+        // Toggle the currency conversion
+        var converted = document.body.getAttribute('data-converted');
 
-    //     if (!converted || converted === 'false') {
-    //         // Prices are not converted, convert and update the attribute
-    //         convertibleElements.forEach(function (priceElement, index) {
-    //             var currentPrice = parseFloat(priceElement.innerText.replace('₹', '').replace(',', ''));
+        if (!converted || converted === 'false') {
+            // Prices are not converted, convert and update the attribute
+            convertibleElements.forEach(function (priceElement, index) {
+                var currentPrice = parseFloat(priceElement.innerText.replace('₹', '').replace(',', ''));
 
-    //             // Convert the price to USD based on the provided formula
-    //             var convertedPrice = (currentPrice / exchangeRate).toFixed(2);
+                // Convert the price to USD based on the provided formula
+                var convertedPrice = (currentPrice / exchangeRate).toFixed(2);
 
-    //             // Update the element text with the converted price and currency symbol
-    //             priceElement.innerText = 'USD ' + convertedPrice;
-    //         });
+                // Update the element text with the converted price and currency symbol
+                priceElement.innerText = 'USD ' + convertedPrice;
+            });
 
-    //         document.body.setAttribute('data-converted', 'true');
-    //     } else {
-    //         // Prices are already converted, revert and update the attribute
-    //         convertibleElements.forEach(function (priceElement, index) {
-    //             // Retrieve the original price from the data attribute
-    //             var originalPrice = priceElement.getAttribute('data-original');
+            document.body.setAttribute('data-converted', 'true');
+        } else {
+            // Prices are already converted, revert and update the attribute
+            convertibleElements.forEach(function (priceElement, index) {
+                // Retrieve the original price from the data attribute
+                var originalPrice = priceElement.getAttribute('data-original');
 
-    //             // Update the element text with the original price
-    //             priceElement.innerText = originalPrice;
-    //         });
+                // Update the element text with the original price
+                priceElement.innerText = originalPrice;
+            });
 
-    //         document.body.setAttribute('data-converted', 'false');
-    //     }
-    // }
+            document.body.setAttribute('data-converted', 'false');
+        }
+    }
 
-    // // Save original prices to data attributes on page load
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     var convertibleElements = document.querySelectorAll('.convertible');
+    // Save original prices to data attributes on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        var convertibleElements = document.querySelectorAll('.convertible');
 
-    //     convertibleElements.forEach(function (priceElement, index) {
-    //         var originalPrice = priceElement.innerText;
-    //         priceElement.setAttribute('data-original', originalPrice);
-    //     });
-    // });
+        convertibleElements.forEach(function (priceElement, index) {
+            var originalPrice = priceElement.innerText;
+            priceElement.setAttribute('data-original', originalPrice);
+        });
+    });
 
-    // // Add event listener to the currency conversion button
-    // document.getElementById('convertCurrencyBtn').addEventListener('click', function () {
-    //     // Check if conversion is needed on button click
-    //     convertCurrency();
-    // });
+    // Add event listener to the currency conversion button
+    document.getElementById('convertCurrencyBtn').addEventListener('click', function () {
+        // Check if conversion is needed on button click
+        convertCurrency();
+    });
 
 
-// _________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________
 
 
 // Add event listener to the currency conversion button
@@ -191,6 +191,15 @@ document.addEventListener('DOMContentLoaded', function () {
         priceElement.setAttribute('data-original', originalPrice);
     });
 });
+
+
+// ________________________________________________________________________________________________________________________
+
+
+
+
+    
+
 
 
     
