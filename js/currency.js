@@ -221,7 +221,7 @@ function toggleCurrency() {
         convertibleElements.forEach(function (priceElement) {
             var currentPrice = parseFloat(priceElement.getAttribute('data-original').replace('₹', '').replace(',', ''));
             var convertedPrice = (currentPrice / exchangeRate).toFixed(2);
-            priceElement.innerText = 'USD ' + convertedPrice;
+            priceElement.innerText = '$' + convertedPrice;
         });
 
         document.body.setAttribute('data-currency', 'USD');
