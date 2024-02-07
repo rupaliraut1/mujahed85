@@ -267,7 +267,7 @@ function calculateCost() {
         // Convert the total cost to USD
         var exchangeRate = 83;
         var totalCostUSD = (totalCost / exchangeRate).toFixed(2);
-        totalCostInput.value = 'USD ' + totalCostUSD;
+        totalCostInput.value = '$' + totalCostUSD;
     }
 }
 
