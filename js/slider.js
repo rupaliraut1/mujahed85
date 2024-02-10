@@ -40,21 +40,37 @@ function showSlides(n) {
 //form
 
 function calculateCost() {
-  var tourPackage = parseInt(document.getElementById('tourPackage').value);
   var numberOfPeople = parseFloat(document.getElementById('numberOfPeople').value);
+  var tourPackage;
 
-  if (isNaN(tourPackage) || isNaN(numberOfPeople)) {
-    alert('Please enter valid numbers for quantity and price.');
-    return;
+  switch (numberOfPeople) {
+      case 1:
+          tourPackage = 11500; // Set tour package amount for 1 person
+          break;
+      case 2:
+          tourPackage = 7200; // Set tour package amount for 2 people
+          break;
+      case 3:
+          tourPackage = 6500; // Set tour package amount for 3 people
+          break;
+      
+      case 4:
+          tourPackage = 5800; // Set tour package amount for 3 people
+          break;
+      
+      case 5:
+          tourPackage = 5095; // Set tour package amount for 3 people
+          break;
+      
+      default:
+          tourPackage = 0; // Default to 0 if none selected
   }
 
+  document.getElementById('tourPackage').value = tourPackage.toFixed(2);
+
   var totalAmount = tourPackage * numberOfPeople;
-
-  // Display the item in the list
-  document.getElementById('totalCost').value = '₹' + (totalAmount).toFixed(2);
-
+  document.getElementById('totalCost').value = totalAmount.toFixed(2);
 }
-
 
 function validateForm() {
   // Add your validation logic here
@@ -62,9 +78,9 @@ function validateForm() {
   var numberOfPeople = document.getElementById("numberOfPeople").value;
   var startDate = document.getElementById("startDate").value;
 
-  if (!tourPackage || !numberOfPeople || !startDate || !totalCost) {
-    alert("Please fill in all required fields.");
-    return false;
+  if (!tourPackage || !numberOfPeople || !startDate) {
+      alert("Please fill in all required fields.");
+      return false;
   }
 
   return true;
@@ -73,7 +89,7 @@ function validateForm() {
 function registerTour() {
   // Validate the form
   if (!validateForm()) {
-    return;
+      return;
   }
 
   // Get form data
@@ -84,17 +100,22 @@ function registerTour() {
   var discountCode = document.getElementById("discountCode").value;
   var totalCost = document.getElementById("totalCost").value;
 
-  var phoneNumber = "+918265025800"
-
-
+  // Construct the WhatsApp message
   var messageText = `
-  Tour Package: ${tourPackage}
+  Tour Package Amount: ${tourPackage}
   Number of People: ${numberOfPeople}
   Start Date: ${startDate}
   Preferred Time: ${preferredTime}
   Discount Code: ${discountCode}
-  Total Cost: ${totalCost}
-`;
+  Total Cost: ${totalCost}`;
+
+  // Construct the WhatsApp message URL
+  var phoneNumber = "+918265025800";
+  var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(messageText);
+
+  // Open WhatsApp window
+  window.open(url, "_blank").focus();
+}
 
   // Construct the WhatsApp message URL
   var phoneNumber = "+918265025800";
@@ -103,7 +124,6 @@ function registerTour() {
   // Open WhatsApp window
   window.open(url, "_blank").focus();
 
-}
 
 // whats-app button
 

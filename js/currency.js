@@ -151,42 +151,319 @@
 
 //___________________________________________IT IS WORKING FOR ONLY CARDS______________________________________________________________________
 
+// function changeCurrency(currency) {
+//     // Get all elements with class 'price convertible'
+//     var prices = document.querySelectorAll('.price.convertible');
 
-function changeCurrency(currency) {
-    // Get all elements with class 'price convertible'
-    var prices = document.querySelectorAll('.price.convertible');
+//     // Check if original prices are stored in local storage
+//     var originalPrices = JSON.parse(localStorage.getItem('originalPrices'));
 
-    // Check if original prices are stored in local storage
-    var originalPrices = JSON.parse(localStorage.getItem('originalPrices'));
+//     // If original prices are not stored, store them
+//     if (!originalPrices) {
+//         originalPrices = [];
+//         prices.forEach(function(price) {
+//             originalPrices.push(price.textContent.trim());
+//         });
+//         localStorage.setItem('originalPrices', JSON.stringify(originalPrices));
+//     }
 
-    // If original prices are not stored, store them
-    if (!originalPrices) {
-        originalPrices = [];
-        prices.forEach(function(price) {
-            originalPrices.push(price.textContent.trim());
-        });
-        localStorage.setItem('originalPrices', JSON.stringify(originalPrices));
-    }
+//     // Iterate through each price element
+//     prices.forEach(function(price, index) {
+//         // Get the original price from the stored array
+//         var originalPrice = originalPrices[index];
 
-    // Iterate through each price element
-    prices.forEach(function(price, index) {
-        // Get the original price from the stored array
-        var originalPrice = originalPrices[index];
+//         // Convert the original price to the selected currency
+//         var convertedPrice = convertPrice(originalPrice, currency);
 
-        // Convert the original price to the selected currency
-        var convertedPrice = convertPrice(originalPrice, currency);
+//         // Update the price text with the converted value
+//         price.textContent = convertedPrice;
+//     });
 
-        // Update the price text with the converted value
-        price.textContent = convertedPrice;
-    });
+//     // Prevent default behavior of the <a> tag
+//     event.preventDefault();
+// }
 
-    // Prevent default behavior of the <a> tag
-    event.preventDefault();
+
+// function convertPrice(originalPrice, currency) {
+//     // Define your conversion rates here
+//     var conversionRates = {
+//         'INR': 1,   // 1 INR = 1 INR
+//         'USD': 0.014,  // 1 INR = 0.014 USD (example conversion rate)
+//         'EUR': 0.012,  // Example conversion rate
+//         'GBP': 0.011   // Example conversion rate
+//         // Add more conversion rates as needed
+//     };
+
+//     // Remove currency symbol and commas, convert to float
+//     var amount = parseFloat(originalPrice.replace(/[^\d.]/g, ''));
+
+//     // Perform conversion
+//     var convertedAmount = amount * conversionRates[currency];
+
+//     // Format the converted amount according to the currency
+//     switch(currency) {
+//         case 'INR':
+//             // Format INR with commas and two decimal places
+//             return '₹' + convertedAmount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2}); 
+//         case 'USD':
+//             // Format for USD with two decimal places
+//             return '$' + convertedAmount.toFixed(2); 
+//         case 'EUR':
+//             // Format for EUR with two decimal places
+//             return '€' + convertedAmount.toFixed(2); 
+//         case 'GBP':
+//             // Format for GBP with two decimal places
+//             return '£' + convertedAmount.toFixed(2); 
+//         default:
+//             return originalPrice; // If currency not found, return original
+//     }
+// }
+
+// ________________________________________________________________________________________________________________________
+
+
+// // Function to calculate the total cost based on the number of people and tour package price
+// function calculateCost() {
+//     var numberOfPeople = parseFloat(document.getElementById('numberOfPeople').value);
+//     var tourPackage;
+
+//     // Define tour package prices in INR
+//     var tourPackagePrices = {
+//         1: 11500,
+//         2: 7200,
+//         3: 6500,
+//         4: 5800,
+//         5: 5095
+//     };
+
+//     // Get tour package price for the selected number of people
+//     tourPackage = tourPackagePrices[numberOfPeople];
+
+//     document.getElementById('tourPackage').value = '₹' + tourPackage.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+
+//     var totalAmount = tourPackage * numberOfPeople;
+//     document.getElementById('totalCost').value = '₹' + totalAmount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+// }
+
+// // Function to validate the form
+// function validateForm() {
+//     // Add your validation logic here
+//     var tourPackage = document.getElementById("tourPackage").value;
+//     var numberOfPeople = document.getElementById("numberOfPeople").value;
+//     var startDate = document.getElementById("startDate").value;
+
+//     if (!tourPackage || !numberOfPeople || !startDate) {
+//         alert("Please fill in all required fields.");
+//         return false;
+//     }
+
+//     return true;
+// }
+
+// // Function to register the tour
+// function registerTour() {
+//     // Validate the form
+//     if (!validateForm()) {
+//         return;
+//     }
+
+//     // Get form data
+//     var tourPackage = document.getElementById("tourPackage").value;
+//     var numberOfPeople = document.getElementById("numberOfPeople").value;
+//     var startDate = document.getElementById("startDate").value;
+//     var preferredTime = document.getElementById("preferredTime").value;
+//     var totalCost = document.getElementById("totalCost").value;
+
+//     // Construct the WhatsApp message
+//     var messageText = `
+//     Tour Package Amount: ${tourPackage}
+//     Number of People: ${numberOfPeople}
+//     Start Date: ${startDate}
+//     Preferred Time: ${preferredTime}
+//     Total Cost: ${totalCost}`;
+
+//     // Display the WhatsApp message
+//     console.log(messageText);
+// }
+
+// _______________________________________________________________________________________________________________________
+
+
+// function calculateCost() {
+//     var numberOfPeople = parseFloat(document.getElementById('numberOfPeople').value);
+//     var tourPackage;
+
+//     // Define tour package prices in INR
+//     var tourPackagePrices = {
+//         1: 11500,
+//         2: 7200,
+//         3: 6500,
+//         4: 5800,
+//         5: 5095
+//     };
+
+//     // Get tour package price for the selected number of people
+//     tourPackage = tourPackagePrices[numberOfPeople];
+
+//     document.getElementById('tourPackage').value = '₹' + tourPackage.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+
+//     var totalAmount = tourPackage * numberOfPeople;
+//     document.getElementById('totalCost').value = '₹' + totalAmount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+// }
+
+// // Function to validate the form
+// function validateForm() {
+//     // Add your validation logic here
+//     var tourPackage = document.getElementById("tourPackage").value;
+//     var numberOfPeople = document.getElementById("numberOfPeople").value;
+//     var startDate = document.getElementById("startDate").value;
+
+//     if (!tourPackage || !numberOfPeople || !startDate) {
+//         alert("Please fill in all required fields.");
+//         return false;
+//     }
+
+//     return true;
+// }
+
+// // Function to register the tour
+// function registerTour() {
+//     // Validate the form
+//     if (!validateForm()) {
+//         return;
+//     }
+
+//     // Get form data
+//     var tourPackage = document.getElementById("tourPackage").value;
+//     var numberOfPeople = document.getElementById("numberOfPeople").value;
+//     var startDate = document.getElementById("startDate").value;
+//     var preferredTime = document.getElementById("preferredTime").value;
+//     var totalCost = document.getElementById("totalCost").value;
+
+//     // Construct the WhatsApp message
+//     var messageText = `
+//     Tour Package Amount: ${tourPackage}
+//     Number of People: ${numberOfPeople}
+//     Start Date: ${startDate}
+//     Preferred Time: ${preferredTime}
+//     Total Cost: ${totalCost}`;
+
+//     // Display the WhatsApp message
+//     console.log(messageText);
+// }
+
+// // Function to change the currency
+// function changeCurrency(currency) {
+//     var tourPackage = parseFloat(document.getElementById('tourPackage').value.replace(/[^\d.]/g, ''));
+//     var totalCost = parseFloat(document.getElementById('totalCost').value.replace(/[^\d.]/g, ''));
+
+//     var conversionRates = {
+//         'INR': 1,   // 1 INR = 1 INR
+//         'USD': 0.014,  // 1 INR = 0.014 USD (example conversion rate)
+//         'EUR': 0.012,  // Example conversion rate
+//         'GBP': 0.011   // Example conversion rate
+//         // Add more conversion rates as needed
+//     };
+
+//     var convertedTourPackage = tourPackage * conversionRates[currency];
+//     var convertedTotalCost = totalCost * conversionRates[currency];
+
+//     document.getElementById('tourPackage').value = getFormattedCurrency(convertedTourPackage, currency);
+//     document.getElementById('totalCost').value = getFormattedCurrency(convertedTotalCost, currency);
+// }
+
+// // Function to format currency
+// function getFormattedCurrency(amount, currency) {
+//     switch(currency) {
+//         case 'INR':
+//             return '₹' + amount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+//         case 'USD':
+//             return '$' + amount.toLocaleString('en-US', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+//         case 'EUR':
+//             return '€' + amount.toLocaleString('en-EU', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+//         case 'GBP':
+//             return '£' + amount.toLocaleString('en-GB', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+//         default:
+//             return amount;
+//     }
+// }
+
+// _________________________________________________________________________________________________________________________
+
+
+// Function to calculate the tour cost based on the number of people selected
+function calculateCost() {
+    var numberOfPeople = parseInt(document.getElementById('numberOfPeople').value);
+    var tourPackage;
+
+    // Define tour package prices in INR
+    var tourPackagePrices = {
+        1: 11500,
+        2: 7200,
+        3: 6500,
+        4: 5800,
+        5: 5095
+    };
+
+    // Get tour package price for the selected number of people
+    tourPackage = tourPackagePrices[numberOfPeople];
+
+    document.getElementById('tourPackage').value = '₹' + tourPackage.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
+
+    var totalAmount = tourPackage * numberOfPeople;
+    document.getElementById('totalCost').value = '₹' + totalAmount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
 }
 
+// Function to validate the form
+function validateForm() {
+    // Add your validation logic here
+    var tourPackage = document.getElementById("tourPackage").value;
+    var numberOfPeople = document.getElementById("numberOfPeople").value;
+    var startDate = document.getElementById("startDate").value;
 
-function convertPrice(originalPrice, currency) {
-    // Define your conversion rates here
+    if (!tourPackage || !numberOfPeople || !startDate) {
+        alert("Please fill in all required fields.");
+        return false;
+    }
+
+    return true;
+}
+
+// Function to register the tour
+function registerTour() {
+    // Validate the form
+    if (!validateForm()) {
+        return;
+    }
+
+    // Call changeCurrency to update the currency conversion
+    var selectedCurrency = document.getElementById("currencySelect").value;
+    changeCurrency(selectedCurrency);
+
+    // Get form data
+    var tourPackage = document.getElementById("tourPackage").value;
+    var numberOfPeople = document.getElementById("numberOfPeople").value;
+    var startDate = document.getElementById("startDate").value;
+    var preferredTime = document.getElementById("preferredTime").value;
+    var totalCost = document.getElementById("totalCost").value;
+
+    // Construct the WhatsApp message
+    var messageText = `
+    Tour Package Amount: ${tourPackage}
+    Number of People: ${numberOfPeople}
+    Start Date: ${startDate}
+    Preferred Time: ${preferredTime}
+    Total Cost: ${totalCost}`;
+
+    // Display the WhatsApp message
+    console.log(messageText);
+}
+
+// Function to change the currency
+function changeCurrency(currency) {
+    var originalTourPackage = parseFloat(document.getElementById('originalTourPackage').value.replace(/[^\d.]/g, ''));
+    var originalTotalCost = parseFloat(document.getElementById('originalTotalCost').value.replace(/[^\d.]/g, ''));
+
     var conversionRates = {
         'INR': 1,   // 1 INR = 1 INR
         'USD': 0.014,  // 1 INR = 0.014 USD (example conversion rate)
@@ -195,27 +472,26 @@ function convertPrice(originalPrice, currency) {
         // Add more conversion rates as needed
     };
 
-    // Remove currency symbol and commas, convert to float
-    var amount = parseFloat(originalPrice.replace(/[^\d.]/g, ''));
+    var convertedTourPackage = originalTourPackage * conversionRates[currency];
+    var convertedTotalCost = originalTotalCost * conversionRates[currency];
 
-    // Perform conversion
-    var convertedAmount = amount * conversionRates[currency];
+    document.getElementById('tourPackage').value = getFormattedCurrency(convertedTourPackage, currency);
+    document.getElementById('totalCost').value = getFormattedCurrency(convertedTotalCost, currency);
+}
 
-    // Format the converted amount according to the currency
+// Function to format currency
+function getFormattedCurrency(amount, currency) {
     switch(currency) {
         case 'INR':
-            // Format INR with commas and two decimal places
-            return '₹' + convertedAmount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2}); 
+            return '₹' + amount.toLocaleString('en-IN', {maximumFractionDigits: 2, minimumFractionDigits: 2});
         case 'USD':
-            // Format for USD with two decimal places
-            return '$' + convertedAmount.toFixed(2); 
+            return '$' + amount.toLocaleString('en-US', {maximumFractionDigits: 2, minimumFractionDigits: 2});
         case 'EUR':
-            // Format for EUR with two decimal places
-            return '€' + convertedAmount.toFixed(2); 
+            return '€' + amount.toLocaleString('en-EU', {maximumFractionDigits: 2, minimumFractionDigits: 2});
         case 'GBP':
-            // Format for GBP with two decimal places
-            return '£' + convertedAmount.toFixed(2); 
+            return '£' + amount.toLocaleString('en-GB', {maximumFractionDigits: 2, minimumFractionDigits: 2});
         default:
-            return originalPrice; // If currency not found, return original
+            return amount;
     }
 }
+

@@ -263,44 +263,38 @@
         <div class="form-container">
             <form id="tourForm" action="#" method="POST">
                 <p>BEST STREET FOOD TOUR MUMBAI</p>
-                <label for="tourPackage">Select Tour Package:</label>
-                <select id="tourPackage" name="tourPackage" name="entry.101712364">
-                    <option value="select">Select</option>
-                    <option value="48000" class="convertible"> ₹4,800.00</option>
-                </select>
-
+    
                 <label for="numberOfPeople">Number of People:</label>
-                <select id="numberOfPeople" name="numberOfPeople" name="entry.626323194" onchange="calculateCost()"
-                    required>
+                <select id="numberOfPeople" name="numberOfPeople" onchange="calculateCost()" required>
                     <option value="select">Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-
+    
                 <label for="startDate">Select Start Date:</label>
-                <input type="date" id="startDate" name="startDate"
-                    name="entry.1180521769_day, entry.1180521769_month, entry.1180521769_year" required>
-
+                <input type="date" id="startDate" name="startDate" required>
+    
+                <label for="tourPackage">Tour Package price(₹) per person:</label>
+                <input type="text" id="tourPackage" class="convertible" name="tourPackage" placeholder="Tour package amount" readonly required>
+    
                 <label for="preferredTime">Preferred Tour Time:</label>
-                <select id="preferredTime" name="preferredTime" name="entry.236059718">
+                <select id="preferredTime" name="preferredTime">
                     <option value="select">Select</option>
                     <option value="morning">Morning</option>
                     <option value="afternoon">Afternoon</option>
                     <option value="evening">Evening</option>
-                </select> 
-
-                <label for="discountCode">Discount Code:</label>
-                <input type="text" id="discountCode" name="discountCode" class="convertible" name="entry.831696633">
-
-                <label for="totalCost">Total Cost:</label>
-                <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" required
-                    readonly>
-
+                </select>
+          
+                <label for="totalCost">Total Cost (₹):</label>
+                <input type="text" id="totalCost" class="convertible" name="totalCost" required readonly>
+    
                 <div id="buttons-container">
-                    <button id="registration-btn" type="button" onclick="registerTour(event);">Register Now</button>
+                    <button id="registration-btn" type="button" onclick="registerTour();">Register Now</button>
                 </div>
-
+    
                 <div id="total-cost-display"></div>
             </form>
         </div>

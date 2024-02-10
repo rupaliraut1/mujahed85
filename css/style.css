@@ -796,88 +796,31 @@ background: #e4ec9f;
     opacity: 1;
 }
 
-/* form*/
-/* form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #3498db;
-}
-
-button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-#total-cost {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #27ae60;
-}
-
-#registration-btn {
-    background-color: #27ae60;
-}
-
-#registration-btn:hover {
-    background-color: #219d53;
-} */
 
 .form-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Make the form container wider */
-    max-width: 400px; /* Set a maximum width for better responsiveness */
-    margin: 0 auto; /* Center the form within the container */
+    width: 80%;
+    /* Make the form container wider */
+    max-width: 400px;
+    /* Set a maximum width for better responsiveness */
+    margin: 0 auto;
+    /* Center the form within the container */
     display: grid;
     gap: 15px;
     grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
 }
-.form-container p{
+
+.form-container p {
     color: #68bb31;
 }
 
 label {
     font-weight: bold;
-    grid-column: span 2; /* Make labels span two columns */
+    grid-column: span 2;
+    /* Make labels span two columns */
 }
 
 input,
@@ -900,13 +843,15 @@ button {
     font-weight: bold;
     color: #4caf50;
     margin-top: 10px;
-    grid-column: span 2; /* Make the total cost display span two columns */
+    grid-column: span 2;
+    /* Make the total cost display span two columns */
 }
 
 #buttons-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap-reverse; /* Stack buttons at the bottom for smaller screens */
+    flex-wrap: wrap-reverse;
+    /* Stack buttons at the bottom for smaller screens */
 }
 
 #calculate-cost-btn,
@@ -926,7 +871,8 @@ button {
 
 @media screen and (max-width: 600px) {
     .form-container {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%;
+        /* Adjust width for smaller screens */
     }
 }
 
