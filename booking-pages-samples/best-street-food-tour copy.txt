@@ -22,7 +22,6 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -111,24 +110,21 @@
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Metro Shoping Plaza, Colaba,
                         Mumbai</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9930545963</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>fabmumbaitours@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://twitter.com/fabmumbaitours" target="_blank"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/fabmumbaitours" target="_blank"><i
                             class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://www.facebook.com/profile.php?id=61555847077219" target="_blank"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=61555847077219" target="_blank"><i
                             class="fab fa-facebook-f fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="#"><i
                             class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://www.instagram.com/fabmumbaitours/?hl=en" target="_blank"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/fabmumbaitours/?hl=en" target="_blank"><i
                             class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
-                        href="https://www.youtube.com/@fabmumbaitours" target="_blank"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/@fabmumbaitours" target="_blank"><i
                             class="fab fa-youtube fw-normal"></i></a>
                 </div>
             </div>
@@ -151,21 +147,7 @@
                     <a href="../index.html" class="nav-item nav-link active">Home</a>
                     <a href="../contact.html" class="nav-item nav-link">Contact</a>
 
-                    <!-- <button class="currency-btn" type="button" id="convertCurrencyBtn">USD ($)</button> -->
-
-                    <div class="container py-5">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select Currency
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><button class="dropdown-item" onclick="changeCurrency('INR')">INR</button></li>
-                                <li><button class="dropdown-item" onclick="changeCurrency('USD')">USD</button></li>
-                                <li><button class="dropdown-item" onclick="changeCurrency('EUR')">EUR</button></li>
-                                <li><button class="dropdown-item" onclick="changeCurrency('GBP')">GBP</button></li>
-                                <!-- Add more currencies as needed -->
-                            </ul>                            
-                        </div>
+                    <button class="currency-btn" type="button" id="convertCurrencyBtn">USD ($)</button>
                 </div>
             </div>
         </nav>
@@ -200,26 +182,32 @@
         <div class="slideshow-container">
             <div class="slider-container">
                 <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
                     <img src="../img/street-food/chicken-seek.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
                     <img src="../img/street-food/couples-dinner.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
                     <img src="../img/street-food/desi-thali.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
                     <img src="../img/street-food/dhaipuri-bil.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
                     <img src="../img/street-food/family-pav-bhaji.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
                     <img src="../img/street-food/fmily-dinner.jpg" style="width:100%">
                 </div>
 
@@ -233,27 +221,27 @@
                 <div class="row">
                     <div class="column">
                         <img class="demo cursor" src="../img/street-food/chicken-seek.jpg" style="width:100%"
-                            onclick="currentSlide(1)">
+                            onclick="currentSlide(1)" alt="The Woods">
                     </div>
                     <div class="column">
                         <img class="demo cursor" src="../img/street-food/couples-dinner.jpg" style="width:100%"
-                            onclick="currentSlide(2)">
+                            onclick="currentSlide(2)" alt="Cinque Terre">
                     </div>
                     <div class="column">
                         <img class="demo cursor" src="../img/street-food/desi-thali.jpg" style="width:100%"
-                            onclick="currentSlide(3)">
+                            onclick="currentSlide(3)" alt="Mountains and fjords">
                     </div>
                     <div class="column">
                         <img class="demo cursor" src="../img/street-food/dhaipuri-bil.jpg" style="width:100%"
-                            onclick="currentSlide(4)">
+                            onclick="currentSlide(4)" alt="Northern Lights">
                     </div>
                     <div class="column">
                         <img class="demo cursor" src="../img/street-food/family-pav-bhaji.jpg" style="width:100%"
-                            onclick="currentSlide(5)">
+                            onclick="currentSlide(5)" alt="Nature and sunrise">
                     </div>
                     <div class="column">
                         <img class="demo cursor" src="../img/street-food/fmily-dinner.jpg" style="width:100%"
-                            onclick="currentSlide(6)">
+                            onclick="currentSlide(6)" alt="Snowy Mountains">
                     </div>
                 </div>
             </div>
@@ -288,14 +276,13 @@
                     <option value="morning">Morning</option>
                     <option value="afternoon">Afternoon</option>
                     <option value="evening">Evening</option>
-                </select> 
+                </select>
 
                 <label for="discountCode">Discount Code:</label>
                 <input type="text" id="discountCode" name="discountCode" class="convertible" name="entry.831696633">
 
                 <label for="totalCost">Total Cost:</label>
-                <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" required
-                    readonly>
+                <input type="text" id="totalCost" class="convertible" name="totalCost" name="entry.1768228878" required readonly>
 
                 <div id="buttons-container">
                     <button id="registration-btn" type="button" onclick="registerTour(event);">Register Now</button>
@@ -360,175 +347,72 @@
 
     <!-- Schedule Section-4 Start -->
 
-    <div class="descryption-container schedule-container">
-        <section class="py-60">
-            <h3>Schedule</h3>
-            <div class="container text-control-1">
-                <div class="faqs-section">
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title=""><strong>Visit : Chhatrapati Shivaji Maharaj
-                                        Terminus</strong></p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer"> Chhatrapati Shivaji Maharaj Terminus in Mumbai, India, is a UNESCO World
-                                Heritage Site and historic railway station. Built in Italian Gothic style, it was
-                                completed in 1887 to commemorate Queen Victoria's 50-year rule. With its ornate design,
-                                stained glass windows, and iconic status, it's a must-visit for travelers to Mumbai.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title="">
-                                    <strong>Visit : Gateway of India</strong>
-                                </p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer">The Gateway of India is a magnificent arch-monument in Mumbai, India,
-                                constructed in the early 20th century to commemorate the landing of King George V and
-                                Queen Mary in December 1911. Its construction marked an important moment in India's
-                                colonial history, and the gateway was used as a ceremonial entrance for British
-                                dignitaries. The monument also has a significant place in India's struggle for
-                                independence; it was from here that the last British troops departed in 1948, following
-                                India's independence. Today, The Gateway of India is a popular tourist destination and a
-                                must-visit landmark for anyone interested in Mumbai's history and cultural significance.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title=""><strong>Drive Past: Bombay University</strong></p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer">Established in 1857, the University of Bombay is one of India's oldest and
-                                most prestigious universities. Modeled after the University of London, it was founded in
-                                response to a petition from the Bombay Association to the British colonial government in
-                                India. A famous landmark of Mumbai, the Rajabai Clock Tower was completed in the 1870s
-                                and is home to the university's library. The tower was funded by local businessman
-                                Premchand Roychand, who named it in honor of his mother, Rajabai. Today, the University
-                                of Bombay is a leading institution of higher education and a symbol of Mumbai's
-                                intellectual and cultural legacy.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title="">
-                                    <strong>Drive Past: Bombay High Court</strong>
-                                </p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer"> The Bombay High Court is one of India's oldest and most renowned High
-                                Courts, established in 1862 under the High Courts Act, 1861. It was one of three High
-                                Courts established at the Presidency Towns by Queen Victoria's Letters patent. The High
-                                Court building, located in the Fort area of Mumbai, was constructed in the Early English
-                                Gothic Revival style and features impressive statues of Justice and Mercy. Construction
-                                began in 1871 and was completed in 1878. Today, the Bombay High Court remains an iconic
-                                symbol of India's legal system and a must-visit landmark for anyone interested in
-                                Mumbai's rich history and cultural heritage.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title="">
-                                    <strong>Drive Past: Marine Drive / Queen’s Necklace</strong>
-                                </p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer"> Marine Drive is a 3-kilometer long promenade shaped like a 'C' along the
-                                coast of a natural bay in Mumbai. It is also known as the Queen's Necklace because of
-                                the street lights resembling a string of pearls at night. The beauty of this spot is
-                                further enhanced by several Art Deco style buildings that are a UNESCO World Heritage
-                                Site. These buildings, combined with the sparkling Arabian Sea, give Marine Drive a
-                                distinct charm and has earned it the nickname "Miniature Miami." Visitors can take a
-                                leisurely walk, admire the stunning architecture, and immerse themselves in the lively
-                                atmosphere of this popular destination in Mumbai.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title="">
-                                    <strong>Visit: Gandhi Museum</strong>
-                                </p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer"> Mani Bhavan was Gandhi's Mumbai headquarters for 17 years, where he
-                                initiated several movements including Non-cooperation, Satyagraha, Swadeshi, Khadi, and
-                                Khilafat. The building is now a memorial maintained by the Gandhi Smarak Nidhi, with a
-                                photo gallery, a library, and exhibits of Gandhi's personal belongings, including his
-                                spinning wheels and his bed on the floor. The museum also displays letters addressed by
-                                Gandhi to President Roosevelt and Hitler. In 2010, President Barack Obama became the
-                                first high-profile international visitor to visit the Mani Bhavan Gandhi Sangrahalaya in
-                                50 years, where he toured Gandhi's room.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title="">
-                                    <strong>Visit: Hanging Gardens
-                                    </strong>
-                                </p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer"> The Hanging Gardens, also known as Pherozeshah Mehta Gardens, offer
-                                stunning sunset views over the Arabian Sea from the top of Malabar Hill in Mumbai. They
-                                were designed in 1881 by Ulhas Ghapokar to cover the main reservoir and feature
-                                animal-shaped hedges. The Hanging Gardens Path inside the park spells out the initials
-                                PMG in cursive when viewed from above.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title="">
-                                    <strong>Photostop: Dhobi Ghat
-                                    </strong>
-                                </p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer"> Mahalaxmi Dhobi Ghat is an iconic open-air laundry facility located in
-                                Mumbai, India, where the washers or "dhobis" work in the open to clean clothes and
-                                linens from Mumbai’s hotels and hospitals. The place has been operational since 1890 and
-                                is accessible from the Jacob Circle monorail station. Dhobi ghat is a phrase used all
-                                over India to refer to any place where many washers are present, and the Mumbai Dhobi
-                                Ghat has inspired the construction of similar facilities in other parts of southern
-                                Asia.</p>
-                        </div>
-                    </div>
-                    <div class="faq accordion">
-                        <div class="question-wrapper">
-                            <div class="d-flex align-items-center"><span class="q-mark d-block"></span>
-                                <p class="question" title=""><strong>Concluding the Tour</strong></p>
-                            </div><i class="material-icons drop">expand_more</i>
-                        </div>
-                        <div class="answer-wrapper">
-                            <p class="answer">As our Mumbai City Tour comes to an end, we hope this day has allowed you
-                                to savor the diverse flavors, sights, and sounds of this dynamic metropolis. From the
-                                historic landmarks that tell tales of its past to the bustling streets that embody its
-                                vibrant present, Mumbai has unfolded before you in all its glory. We trust that you've
-                                collected cherished memories, newfound knowledge, and a genuine appreciation for the
-                                spirit of Mumbai. Thank you for choosing to explore this incredible city with us, and we
-                                look forward to welcoming you back to experience more of Mumbai's wonders in the future.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="schedule-container">
+        <h3 class="">Schedule</h3>
+        <!-- <div class=""> -->
+        <p><strong>Visit: Chhatrapati Shivaji Maharaj Terminus</strong><br> Chhatrapati Shivaji Maharaj
+            Terminus in Mumbai, India, is a UNESCO World Heritage Site and historic railway
+            station. Built in Italian Gothic style, it was completed in 1887 to commemorate Queen
+            Victoria's 50-year rule. With its ornate design, stained glass windows, and iconic
+            status, it's a must-visit for travelers to Mumbai.</p>
+        <p><strong>Visit: Gateway of India </strong><br> The Gateway of India is a magnificent arch-monument in
+            Mumbai, India, constructed in the early 20th century to commemorate the landing of King George V and
+            Queen Mary in December 1911. Its construction marked an important moment in India's colonial
+            history, and the gateway was used as a ceremonial entrance for British dignitaries. The monument
+            also has a significant place in India's struggle for independence; it was from here that the last
+            British troops departed in 1948, following India's independence. Today, The Gateway of India is a
+            popular tourist destination and a must-visit landmark for anyone interested in Mumbai's history and
+            cultural significance.</p>
+        <p><strong>Drive Past: Bombay University </strong><br> Established in 1857, the University of Bombay is
+            one of India's oldest and most prestigious universities. Modeled after the University of London, it
+            was founded in response to a petition from the Bombay Association to the British colonial government
+            in India. A famous landmark of Mumbai, the Rajabai Clock Tower was completed in the 1870s and is
+            home to the university's library. The tower was funded by local businessman Premchand Roychand, who
+            named it in honor of his mother, Rajabai. Today, the University of Bombay is a leading institution
+            of higher education and a symbol of Mumbai's intellectual and cultural legacy.</p>
+        <p><strong>Drive Past: Bombay High Court </strong><br> The Bombay High Court is one of India's oldest
+            and most renowned High Courts, established in 1862 under the High Courts Act, 1861. It was one of
+            three High Courts established at the Presidency Towns by Queen Victoria's Letters patent. The High
+            Court building, located in the Fort area of Mumbai, was constructed in the Early English Gothic
+            Revival style and features impressive statues of Justice and Mercy. Construction began in 1871 and
+            was completed in 1878. Today, the Bombay High Court remains an iconic symbol of India's legal system
+            and a must-visit landmark for anyone interested in Mumbai's rich history and cultural heritage.</p>
+        <p><strong>Drive Past: Marine Drive / Queen’s Necklace </strong><br> Marine Drive is a 3-kilometer long
+            promenade shaped like a 'C' along the coast of a natural bay in Mumbai. It is also known as the
+            Queen's Necklace because of the street lights resembling a string of pearls at night. The beauty of
+            this spot is further enhanced by several Art Deco style buildings that are a UNESCO World Heritage
+            Site. These buildings, combined with the sparkling Arabian Sea, give Marine Drive a distinct charm
+            and has earned it the nickname "Miniature Miami." Visitors can take a leisurely walk, admire the
+            stunning architecture, and immerse themselves in the lively atmosphere of this popular destination
+            in Mumbai.</p>
+        <p><strong>Visit: Gandhi Museum </strong><br> Mani Bhavan was Gandhi's Mumbai headquarters for 17 years,
+            where he initiated several movements including Non-cooperation, Satyagraha, Swadeshi, Khadi, and
+            Khilafat. The building is now a memorial maintained by the Gandhi Smarak Nidhi, with a photo
+            gallery, a library, and exhibits of Gandhi's personal belongings, including his spinning wheels and
+            his bed on the floor. The museum also displays letters addressed by Gandhi to President Roosevelt
+            and Hitler. In 2010, President Barack Obama became the first high-profile international visitor to
+            visit the Mani Bhavan Gandhi Sangrahalaya in 50 years, where he toured Gandhi's room.</p>
+        <p><strong>Visit: Hanging Gardens </strong><br> The Hanging Gardens, also known as Pherozeshah Mehta
+            Gardens, offer stunning sunset views over the Arabian Sea from the top of Malabar Hill in Mumbai.
+            They were designed in 1881 by Ulhas Ghapokar to cover the main reservoir and feature animal-shaped
+            hedges. The Hanging Gardens Path inside the park spells out the initials PMG in cursive when viewed
+            from above.</p>
+        <p><strong>Photostop: Dhobi Ghat </strong><br> Mahalaxmi Dhobi Ghat is an iconic open-air laundry
+            facility located in Mumbai, India, where the washers or "dhobis" work in the open to clean clothes
+            and linens from Mumbai’s hotels and hospitals. The place has been operational since 1890 and is
+            accessible from the Jacob Circle monorail station. Dhobi ghat is a phrase used all over India to
+            refer to any place where many washers are present, and the Mumbai Dhobi Ghat has inspired the
+            construction of similar facilities in other parts of southern Asia.</p>
+        <p><strong>Concluding the Tour </strong><br> As our Mumbai City Tour comes to an end, we hope
+            this day has allowed you to savor the diverse flavors, sights, and sounds of this dynamic
+            metropolis. From the historic landmarks that tell tales of its past to the bustling
+            streets that embody its vibrant present, Mumbai has unfolded before you in all its glory.
+            We trust that you've collected cherished memories, newfound knowledge, and a genuine
+            appreciation for the spirit of Mumbai. Thank you for choosing to explore this incredible
+            city with us, and we look forward to welcoming you back to experience more of Mumbai's
+            wonders in the future.</p>
     </div>
+
     <!-- Schedule Section-4 End -->
 
 
@@ -594,6 +478,42 @@
             allowfullscreen></iframe>
 
         <hr>
+        <h3>FAQ:</h3>
+        <div class="faq-item">
+            <div class="faq-question"><strong>Q:</strong> What makes the Private Mumbai City Tour with Local Train
+                Experience unique?</div>
+            <div class="faq-answer"><strong>A:</strong> Explore Mumbai's highlights with a personalized touch, including
+                a unique local train experience,
+                offering an authentic and immersive city exploration.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question"><strong>Q:</strong> Can I customize the Private Mumbai City Tour itinerary to suit
+                my interests?</div>
+            <div class="faq-answer"><strong>A:</strong> Absolutely! Tailor your tour by selecting specific landmarks or
+                cultural elements, ensuring a
+                personalized and memorable exploration of Mumbai.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question"><strong>Q:</strong> How long is the duration of the Private Mumbai Tour with Local
+                Train Experience?</div>
+            <div class="faq-answer"><strong>A:</strong> The tour typically spans [4-5] hours, allowing you ample time to
+                visit key attractions, experience
+                local train travel, and gain a deeper understanding of Mumbai.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question"><strong>Q:</strong> Will there be knowledgeable guides providing insights during
+                the city tour?</div>
+            <div class="faq-answer"><strong>A:</strong> Yes, experienced guides accompany you, offering insights into
+                Mumbai's history, culture, and
+                providing context to the unique local train experience.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question"><strong>Q:</strong> Is transportation included for the Mumbai Tour from the
+                starting point?</div>
+            <div class="faq-answer"><strong>A:</strong> Yes, convenient transportation options are included, ensuring a
+                hassle-free journey to and from
+                the tour starting point, allowing you to focus on enjoying the city and train</div>
+        </div>
     </div>
 
     <!-- Descryption Section-5  Start -->
@@ -645,6 +565,124 @@
     <!-- Rate-comment Section-6 end -->
 
 
+    <!-- Comment Section-7 Start -->
+
+    <div class="comment-box-column">
+        <h2>Happy Clients!</h2>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/r.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Renata Jonczyk</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"The best tour guide I could ever ask for. Very helpful, respectful and friendly. Showed me the best
+                    places."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/j.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">JACOB MOYA</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"We just finished our personalized tour and we enjoyed tremendously. We were drove in a very clean
+                    car, with our new friend Sultan driving and AzIz as a tour guide. Their English was very clear and
+                    proper, and the description was higher than our expectations. They never rush us and where always
+                    accommodating to our needs. Strongly recommended"</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/n.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Najmul Khan</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"Abdul was so good with our chefeur Sultan, he was helpful. They did so good with our requirements.
+                    Since we are in rush and with very short time in Mumbai, they made our trip so worthwhile to make
+                    most of the remarkable place in such a short time. Thanks to both of them. We suggest to take their
+                    help if you are in Mumbai."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/a.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Alyson Stein</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"I would highly recommend Fab Mumbai Tours for sightseeing in Mumbai. We did a city tour and an
+                    Elephanta Island tour with them and were very well taken care of. They were extremely knowledgeable,
+                    prompt, and ensured we had everything we needed and saw what we wanted to!
+                    "</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-section">
+                <img class="user-image" src="../img/review/m.png" alt="User Image">
+                <div class="user-details">
+                    <div class="user-name">Mujahed Hussaini</div>
+                </div>
+            </div>
+            <div class="comment-user">
+                <p>"I recently had the pleasure of embarking on a trip with Guiders Abdul Aziz and Fahim, and I cannot
+                    express how incredible the experience was! From the moment we started our journey, their warmth,
+                    knowledge, and genuine passion for guiding shone through. Abdul Aziz and Fahim went above and beyond
+                    to ensure every detail of the trip was not only well-planned but also tailored to our preferences.
+
+                    Their expertise and enthusiasm for the destination enriched our adventure, providing insights and
+                    stories that truly enhanced our understanding and appreciation of the places we visited. Whether it
+                    was historical landmarks, local cuisine, or hidden gems off the beaten path, Abdul Aziz and Fahim's
+                    guidance was invaluable."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- 4 out of 5 stars -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Section-7 End -->
+
+
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -663,17 +701,11 @@
                     <p class="mb-2 phone"><i class="fa fa-phone-alt me-3"></i>+91 9930545963</p>
                     <p class="mb-2 email"><i class="fa fa-envelope me-3"></i>fabmumbaitours@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/fabmumbaitours"
-                            target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social"
-                            href="https://www.facebook.com/profile.php?id=61555847077219" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/fabmumbaitours" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61555847077219" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social"
-                            href="https://www.instagram.com/fabmumbaitours/?hl=en" target="_blank"><i
-                                class="fab fa-instagram fw-normal"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@fabmumbaitours"
-                            target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/fabmumbaitours/?hl=en" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@fabmumbaitours" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -723,7 +755,7 @@
             <script src="../lib/tempusdominus/js/moment.min.js"></script>
             <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
             <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+            
             <!-- Template Javascript -->
             <script src="../js/main.js"></script>
             <script src="../js/slider.js"></script>

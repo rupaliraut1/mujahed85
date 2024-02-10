@@ -105,18 +105,6 @@ function registerTour() {
 
 }
 
-// // Set the minimum date to today
-// document.addEventListener("DOMContentLoaded", function () {
-//   var today = new Date();
-//   var dd = String(today.getDate()).padStart(2, '0');
-//   var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-//   var yyyy = today.getFullYear();
-
-//   today = yyyy + '-' + mm + '-' + dd;
-//   document.getElementById('startDate').min = today;
-// });
-
-
 // whats-app button
 
 // Open the WhatsApp contact panel
@@ -141,27 +129,15 @@ function openWhatsApp(phoneNumber) {
 document.getElementById('whatsapp-button').addEventListener('click', openPanel);
 
 
-// contact form section start
 
-// function whatsapbtn()
-// {
-//     var name = document.getElementById("name").value;
-//     var email = document.getElementById("email").value;
-//     var message = document.getElementById("message").value;
+// // Set the minimum date to today
+// document.addEventListener("DOMContentLoaded", function () {
+//   var today = new Date();
+//   var dd = String(today.getDate()).padStart(2, '0');
+//   var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+//   var yyyy = today.getFullYear();
 
-//     var whatsapbtn = `
-//     Name: ${name}
-//     Email: ${email}
-//     Message: ${message}`
-
-//     // Construct the WhatsApp message URL
-//     var phoneNumber = "+918857029127";
-//     var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsapbtn);
-
-//     // Open WhatsApp window
-//     window.open(url, "_blank").focus();
-// }
-
-// contact form section End
-
+//   today = yyyy + '-' + mm + '-' + dd;
+//   document.getElementById('startDate').min = today;
+// });
 

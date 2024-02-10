@@ -98,7 +98,21 @@
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
 
                     <!-- <button type="button" id="convertCurrencyBtn">USD ($)</button> -->
-                    <button class="currency-btn" type="button" id="convertCurrencyBtn">USD ($)</button>
+                    <!-- <button class="currency-btn" type="button" id="convertCurrencyBtn">USD ($)</button> -->
+
+                    <div class="container py-5">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select Currency
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><button class="dropdown-item" onclick="changeCurrency('INR')">INR</button></li>
+                                <li><button class="dropdown-item" onclick="changeCurrency('USD')">USD</button></li>
+                                <li><button class="dropdown-item" onclick="changeCurrency('EUR')">EUR</button></li>
+                                <li><button class="dropdown-item" onclick="changeCurrency('GBP')">GBP</button></li>
+                                <!-- Add more currencies as needed -->
+                            </ul>                            
+                        </div>
                 </div>
             </div>
         </nav>
