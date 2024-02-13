@@ -154,18 +154,19 @@
                     <!-- <button class="currency-btn" type="button" id="convertCurrencyBtn">USD ($)</button> -->
 
                     <div class="container py-5">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select Currency
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><button class="dropdown-item" onclick="changeCurrency('INR')">INR</button></li>
-                                <li><button class="dropdown-item" onclick="changeCurrency('USD')">USD</button></li>
-                                <li><button class="dropdown-item" onclick="changeCurrency('EUR')">EUR</button></li>
-                                <li><button class="dropdown-item" onclick="changeCurrency('GBP')">GBP</button></li>
-                                <!-- Add more currencies as needed -->
-                            </ul>                            
-                        </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Select Currency
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="INR">INR</a></li>
+                            <li><a class="dropdown-item" href="#" id="USD">USD</a></li>
+                            <li><a class="dropdown-item" href="#" id="EUR">EUR</a></li>
+                            <li><a class="dropdown-item" href="#" id="GBP">GBP</a></li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -278,7 +279,7 @@
                 <input type="date" id="startDate" name="startDate" required>
     
                 <label for="tourPackage">Tour Package price(₹) per person:</label>
-                <input type="text" id="tourPackage" class="convertible" name="tourPackage" placeholder="Tour package amount" readonly required>
+                <input type="text" id="tourPackage" name="tourPackage" placeholder="Tour package amount" readonly required>
     
                 <label for="preferredTime">Preferred Tour Time:</label>
                 <select id="preferredTime" name="preferredTime">
@@ -289,7 +290,7 @@
                 </select>
           
                 <label for="totalCost">Total Cost (₹):</label>
-                <input type="text" id="totalCost" class="convertible" name="totalCost" required readonly>
+                <input type="text" id="totalCost" name="totalCost" required readonly>
     
                 <div id="buttons-container">
                     <button id="registration-btn" type="button" onclick="registerTour();">Register Now</button>
@@ -721,7 +722,7 @@
             <!-- Template Javascript -->
             <script src="../js/main.js"></script>
             <script src="../js/slider.js"></script>
-            <script src="../js/currency.js"></script>
+            <script src="../js/form_currency.js"></script>
             <script src="../js/form.js"></script>
             <script src="../js/booking-page.js"></script>
 </body>
