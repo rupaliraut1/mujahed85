@@ -1290,13 +1290,18 @@ p {
   border: 1px solid black;
   display: inline-block;
   margin-right: 20px;
+  margin-left: -0.5em;
+}
+.resume-title .icon-size i{
+  font-size: .8em;
+  margin: .15em .25em;
 }
 .resume-title .icon-size img{
   /* font-size: 16px; */
   height: 95%;
   border-radius: 50px;
   object-fit: fill;
-  vertical-align: 100%;
+  /* vertical-align: 100%; */
   /* margin-right: 5px; */
 }
 
