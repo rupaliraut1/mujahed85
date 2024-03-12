@@ -3,6 +3,12 @@ function submitForm(event) {
     
     var name = document.getElementById('name').value;
     var message = document.getElementById('message').value;
+
+       // Check if fields are empty
+    if (name.trim() === '' || message.trim() === '') {
+        alert('Please fill out all fields.');
+        return; // Exit the function if fields are empty
+    }
   
     // Replace 'YOUR_GOOGLE_FORM_URL' with your actual Google Form URL
     var googleFormUrl = 'https://script.google.com/macros/s/AKfycbzwgU8xQzHlsuwmWKlO6e90aXABwuyMbVc9YMQd994I4i7Wnoykuq_ZZNQdU4zBmGPDAA/exec';
@@ -25,7 +31,8 @@ function submitForm(event) {
   
             // Display success message on the page
             alert('Form submitted successfully! Thank you.');
-        } else {
+        }
+        else {
             console.error('Error submitting form. Server responded with:', response.status);
             alert('Error submitting form. Please try again later.');
         }
