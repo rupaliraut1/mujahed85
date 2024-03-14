@@ -1349,3 +1349,9 @@ p {
 .just-align{
   text-align: justify;
 }
+
+
+.tool-icon{
+  height: 1.5em;
+  margin-right: 10px;
+}
