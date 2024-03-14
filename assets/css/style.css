@@ -846,9 +846,12 @@ section {
 .services .icon-box .icon img {
   /* font-size: 36px; */
   /* height: 40%; */
-  width: 40%;
+  width: 100%;
   transition: 0.5s;
   position: relative;
+}
+.services .icon-box .icon img:hover {
+  transform: scale(1.5);
 }
 .services .icon-box .icon i {
   font-size: 36px;
@@ -895,7 +898,9 @@ section {
 }
 
 .services .iconbox-blue:hover .icon i {
-  color: #fff;
+  /* color: #fff; */
+  color: #47aeff;
+  transform: scale(1.5);
 }
 
 .services .iconbox-blue:hover .icon path {
@@ -907,7 +912,9 @@ section {
 }
 
 .services .iconbox-orange:hover .icon i {
-  color: #fff;
+  /* color: #fff; */
+  color: #ffa76e;
+  transform: scale(1.5);
 }
 
 .services .iconbox-orange:hover .icon path {
@@ -919,7 +926,9 @@ section {
 }
 
 .services .iconbox-pink:hover .icon i {
-  color: #fff;
+  /* color: #fff; */
+  color: #e80368;
+  transform: scale(1.5);
 }
 
 .services .iconbox-pink:hover .icon path {
@@ -932,7 +941,9 @@ section {
 }
 
 .services .iconbox-yellow:hover .icon i {
-  color: #fff;
+  /* color: #fff; */
+  color: #ffbb2c;;
+  transform: scale(1.5);
 }
 
 .services .iconbox-yellow:hover .icon path {
@@ -944,7 +955,9 @@ section {
 }
 
 .services .iconbox-red:hover .icon i {
-  color: #fff;
+  /* color: #fff; */
+  color: #ff5828;
+  transform: scale(1.5);
 }
 
 .services .iconbox-red:hover .icon path {
@@ -956,7 +969,9 @@ section {
 }
 
 .services .iconbox-teal:hover .icon i {
-  color: #fff;
+  /* color: #fff; */
+  color: #11dbcf;
+  transform: scale(1.5);
 }
 
 .services .iconbox-teal:hover .icon path {
@@ -1307,7 +1322,7 @@ p {
   /* padding: 1px; */
   height: 35px;
   width: 35px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   /* border: 1px solid black; */
   display: inline-block;
   margin-right: 20px;
@@ -1320,9 +1335,9 @@ p {
 .resume-title .icon-size img{
   /* font-size: 16px; */
   height: 100%;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   object-fit: fill;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* vertical-align: 100%; */
   /* margin-right: 5px; */
 }
