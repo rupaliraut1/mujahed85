@@ -2,17 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Column Layout with Slider and A4 Slide</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Mujahed Hussaini - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/blog.css">
 
+    <!-- =======================================================
+    * Template Name: MyResume
+    * Updated: Mar 10 2023 with Bootstrap v5.2.3
+    * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
 
 <body>
 
     <header>
-        <h1>Welcome to the Two Column Layout with Slider and A4 Slide</h1>
+        <h1>Welcome to Our O (Core) Blog</h1>
+        <p>Explore insights, tutorials, and discussions on O (Core) and related topics.</p>
         <a href="index.html" class="back-to-home">Back to Home</a>
     </header>
 
@@ -32,12 +67,37 @@
                 <div class="slides">
                     <!-- Add more slides as needed -->
                     <div id="slide1" class="slide">
-                        <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+                        <!-- <img src="https://via.placeholder.com/800x400" alt="Sample Image">
                         <div class="instructions">
                             <h2>Instructions:</h2>
                             <p>This is a sample slide with an A4 size layout.</p>
                             <p>Feel free to replace the image and instructions with your own content.</p>
-                        </div>
+                        </div> -->
+
+                        <section class="linux">
+                            <h2>Top <span class="highlighting">Linux </span>Blogs for Beginners</h2>
+                            <p>Every user who has started using Linux would find it difficult which of the blog he
+                                should follow. No need to worry as in this section we have provided the list of Linux
+                                blogs for beginners that will keep them updated from time to time as these blogs are
+                                very effective and are updated regularly. </p>
+                        </section>
+                        <section class="linux">
+                            <h3>#1 OMG! <span class="highlighting">Ubuntu!</span></h3>
+                            <p>Ubuntu is a good platform to start for beginners. There is a lot to learn using Ubuntu
+                                and Omg Ubuntu provides the best platform so that the users with a little knowledge of
+                                Linux can start their career. If you want to get the latest news just subscribe to this
+                                website and it will send regular notifications whenever new content is uploaded. The
+                                best part is that the website only deals with the Ubuntu OS content. The blog was
+                                started in 2009 covering most of the information on the Linux operating system.</p>
+                        </section>
+                        <section class="linux">
+                            <h3></h3>
+                            <p></p>
+                        </section>
+                        <section class="linux">
+                            <h3></h3>
+                            <p></p>
+                        </section>
                     </div>
                     <div id="slide2" class="slide">
                         <img src="https://via.placeholder.com/800x400" alt="Sample Image">
@@ -89,72 +149,72 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-        const slides = document.querySelector(".slides");
-        const prevButton = document.getElementById("prev");
-        const nextButton = document.getElementById("next");
-        const sidebarLinks = document.querySelectorAll(".sidebar-link");
+            const slides = document.querySelector(".slides");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+            const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-        let currentIndex = 0;
+            let currentIndex = 0;
 
-        function showSlide(index) {
-            currentIndex = index;
-            const translateValue = -index * 100 + "%";
-            slides.style.transform = "translateX(" + translateValue + ")";
+            function showSlide(index) {
+                currentIndex = index;
+                const translateValue = -index * 100 + "%";
+                slides.style.transform = "translateX(" + translateValue + ")";
+                toggleButtons();
+            }
+
+            function navigateSlide(event) {
+                event.preventDefault();
+                const slideIndex = parseInt(event.target.getAttribute("data-slide"), 10);
+                showSlide(slideIndex);
+            }
+
+            function toggleButtons() {
+                prevButton.style.display = currentIndex === 0 ? "none" : "block";
+                nextButton.style.display =
+                    currentIndex === slides.children.length - 1 ? "none" : "block";
+            }
+
+            function navigateWithKeys(event) {
+                switch (event.key) {
+                    case "ArrowLeft":
+                        if (currentIndex > 0) {
+                            showSlide(currentIndex - 1);
+                        }
+                        break;
+                    case "ArrowRight":
+                        if (currentIndex < slides.children.length - 1) {
+                            showSlide(currentIndex + 1);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            prevButton.addEventListener("click", function () {
+                if (currentIndex > 0) {
+                    showSlide(currentIndex - 1);
+                }
+            });
+
+            nextButton.addEventListener("click", function () {
+                if (currentIndex < slides.children.length - 1) {
+                    showSlide(currentIndex + 1);
+                }
+            });
+
+            // Attach click event to sidebar links
+            sidebarLinks.forEach(function (link) {
+                link.addEventListener("click", navigateSlide);
+            });
+
+            // Attach keydown event to navigate with arrow keys
+            document.addEventListener("keydown", navigateWithKeys);
+
+            // Initial toggle for buttons
             toggleButtons();
-        }
-
-        function navigateSlide(event) {
-            event.preventDefault();
-            const slideIndex = parseInt(event.target.getAttribute("data-slide"), 10);
-            showSlide(slideIndex);
-        }
-
-        function toggleButtons() {
-            prevButton.style.display = currentIndex === 0 ? "none" : "block";
-            nextButton.style.display =
-                currentIndex === slides.children.length - 1 ? "none" : "block";
-        }
-
-        function navigateWithKeys(event) {
-            switch (event.key) {
-                case "ArrowLeft":
-                    if (currentIndex > 0) {
-                        showSlide(currentIndex - 1);
-                    }
-                    break;
-                case "ArrowRight":
-                    if (currentIndex < slides.children.length - 1) {
-                        showSlide(currentIndex + 1);
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        prevButton.addEventListener("click", function () {
-            if (currentIndex > 0) {
-                showSlide(currentIndex - 1);
-            }
         });
-
-        nextButton.addEventListener("click", function () {
-            if (currentIndex < slides.children.length - 1) {
-                showSlide(currentIndex + 1);
-            }
-        });
-
-        // Attach click event to sidebar links
-        sidebarLinks.forEach(function (link) {
-            link.addEventListener("click", navigateSlide);
-        });
-
-        // Attach keydown event to navigate with arrow keys
-        document.addEventListener("keydown", navigateWithKeys);
-
-        // Initial toggle for buttons
-        toggleButtons();
-    });
     </script>
 
 </body>
