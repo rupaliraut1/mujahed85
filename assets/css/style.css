@@ -899,8 +899,8 @@ section {
 }
 
 .services .iconbox-blue:hover .icon i {
-  /* color: #fff; */
-  color: #47aeff;
+  color: #fff;
+  /* color: #47aeff; */
   transform: scale(1.5);
 }
 
@@ -913,8 +913,8 @@ section {
 }
 
 .services .iconbox-orange:hover .icon i {
-  /* color: #fff; */
-  color: #ffa76e;
+  color: #fff;
+  /* color: #ffa76e; */
   transform: scale(1.5);
 }
 
@@ -927,8 +927,8 @@ section {
 }
 
 .services .iconbox-pink:hover .icon i {
-  /* color: #fff; */
-  color: #e80368;
+  color: #fff;
+  /* color: #e80368; */
   transform: scale(1.5);
 }
 
@@ -942,8 +942,8 @@ section {
 }
 
 .services .iconbox-yellow:hover .icon i {
-  /* color: #fff; */
-  color: #ffbb2c;;
+  color: #fff;
+  /* color: #ffbb2c;; */
   transform: scale(1.5);
 }
 
