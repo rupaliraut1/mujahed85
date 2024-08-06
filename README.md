@@ -18,9 +18,4 @@
 
 ![Mujahed's github stats](https://github-readme-stats.vercel.app/api?username=mujahed85&show_icons=true&hide_border=true)&nbsp;&nbsp;
 ![Mujahed's Language stats](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=mujahed85&layout=compact&langs_count=17)
-
-
-
-![Mujahed's GitHub stats](https://github-readme-stats.vercel.app/api?username=nubeera-mco&show_icons=true&theme=transparent) &nbsp;&nbsp;
-![Mujahed's Language stats](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=mujahed85&layout=compact&langs_count=17)
 <br />
