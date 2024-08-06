@@ -13,9 +13,14 @@
 
 ### About Me 🚀
 - 💻 Working as AI Engineering at NubeEra </br>
-- 🌱Post Graduated in Computer(3+3+3 Year). </br>
-- 👨‍💻 My area of interest includes Automation, Cloud, Data, and AI. </br>
+- 🌱 Education BSc.(Comp.Sci.), BCS, MCA (3+3+3 Year). </br>
+- 👨‍💻 My area of interest includes **D**evOps(Automation), **C**loud, **B**igData, and **A**I(Gen. AI). </br>
 
 ![Mujahed's github stats](https://github-readme-stats.vercel.app/api?username=mujahed85&show_icons=true&hide_border=true)&nbsp;&nbsp;
+![Mujahed's Language stats](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=mujahed85&layout=compact&langs_count=17)
+
+
+
+![Mujahed's GitHub stats](https://github-readme-stats.vercel.app/api?username=nubeera-mco&show_icons=true&theme=transparent) &nbsp;&nbsp;
 ![Mujahed's Language stats](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=mujahed85&layout=compact&langs_count=17)
 <br />
