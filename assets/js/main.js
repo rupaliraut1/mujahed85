@@ -109,9 +109,9 @@ const blogsCategories = [
   },
 ];
 
-$(function() {
-    displayBlogCategories();
-});
+// $(function() {
+//     displayBlogCategories();
+// });
 
 const displayBlogCategories = () => {
     let data;
