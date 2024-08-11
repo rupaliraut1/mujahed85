@@ -1,291 +1,136 @@
-/**
-* Template Name: MyResume
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function() {
-  "use strict";
+const blogsCategories = [
+  {
+    id: 1,
+    title: "Enterprise AI",
+    img: "assets/img/blogs/categories/big-data-analytics-solution.svg",
+    alt: "Icon representing Enterprise AI",
+  },
+  {
+    id: 2,
+    title: "Big Data Engineering",
+    img: "assets/img/blogs/categories/technology-consulting-data-science.svg",
+    alt: "Icon representing Big Data Engineering",
+  },
+  {
+    id: 3,
+    title: "DevOps",
+    img: "assets/img/blogs/categories/devOps-services.svg",
+    alt: "Icon representing DevOps",
+  },
+  {
+    id: 4,
+    title: "Data Science",
+    img: "assets/img/blogs/categories/data-visualization.svg",
+    alt: "Icon representing Data Science",
+  },
+  {
+    id: 5,
+    title: "Data Visualization",
+    img: "assets/img/blogs/categories/enterprise-ai.svg",
+    alt: "Icon representing Data Visualization",
+  },
+  {
+    id: 6,
+    title: "Generative AI",
+    img: "assets/img/blogs/categories/serverless-security.svg",
+    alt: "Icon representing Generative AI",
+  },
+  {
+    id: 7,
+    title: "Serverless",
+    img: "assets/img/blogs/categories/cyber-security.svg",
+    alt: "Icon representing Serverless Computing",
+  },
+  {
+    id: 8,
+    title: "Cyber Security",
+    img: "assets/img/blogs/categories/cloud-native.svg",
+    alt: "Icon representing Cyber Security",
+  },
+  {
+    id: 9,
+    title: "Cloud Native Applications",
+    img: "assets/img/blogs/categories/agile-thinking.svg",
+    alt: "Icon representing Cloud Native Applications",
+  },
+  {
+    id: 10,
+    title: "Agile Delivery",
+    img: "assets/img/blogs/categories/kubernetes-solution.svg",
+    alt: "Icon representing Agile Delivery",
+  },
+  {
+    id: 11,
+    title: "Data Foundry",
+    img: "assets/img/blogs/categories/xenonstack-culture.svg",
+    alt: "Icon representing Data Foundry",
+  },
+  {
+    id: 12,
+    title: "Kubernetes Management",
+    img: "assets/img/blogs/categories/blockchain-platform.svg",
+    alt: "Icon representing Kubernetes Management",
+  },
+  {
+    id: 13,
+    title: "Artificial Intelligence Development Tools",
+    img: "assets/img/blogs/categories/integration-with-multiple-cloud.svg",
+    alt: "Icon representing Artificial Intelligence Development Tools",
+  },
+  {
+    id: 14,
+    title: "FinOps",
+    img: "assets/img/blogs/categories/decision-intelligence.svg",
+    alt: "Icon representing FinOps",
+  },
+  {
+    id: 15,
+    title: "XenonStack Culture",
+    img: "assets/img/blogs/categories/setting.svg",
+    alt: "Icon representing XenonStack Culture",
+  },
+  {
+    id: 16,
+    title: "Autonomous Agents",
+    img: "assets/img/blogs/categories/setting.svg",
+    alt: "Icon representing Autonomous Agents",
+  },
+  {
+    id: 16,
+    title: "Blogchain",
+    img: "assets/img/blogs/categories/setting.svg",
+    alt: "Icon representing Autonomous Agents",
+  },
+  {
+    id: 16,
+    title: "Decision Intelligence",
+    img: "assets/img/blogs/categories/setting.svg",
+    alt: "Icon representing Autonomous Agents",
+  },
+];
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
-  }
+$(function() {
+    displayBlogCategories();
+});
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
+const displayBlogCategories = () => {
+    let data;
 
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
+    data = blogsCategories.map(
+      (item) =>
+        `
+        <div data-id="${item.id}" class="col-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="wrapper-card h-100 py-2">
+                <a href="#">
+                    <div class="blog-card">
+                         <img src="${item.img}" alt="${item.alt}" loading="lazy" width="400" height="400" class="img-fluid" />
+                            <h4 class="text-muted">${item.title}</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+        `
+    );
 
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos,
-      behavior: 'smooth'
-    })
-  }
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
-
-  /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
-
-  /**
-   * Hero type effect
-   */
-  // const typed = select('.typed')
-  // if (typed) {
-  //   let typed_strings = typed.getAttribute('data-typed-items')
-  //   typed_strings = typed_strings.split(',')
-  //   new Typed('.typed', {
-  //     strings: typed_strings,
-  //     loop: true,
-  //     typeSpeed: 100,
-  //     backSpeed: 50,
-  //     backDelay: 2000
-  //   });
-  // }
-
-
-  const typed = document.querySelector('.typed');
-if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split('|');
-
-    new Typed('.typed', {
-        strings: typed_strings.map((str, index) => `<span style="color: ${getColor(index)}">${str}</span>`),
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 2000
-    });
+    $("#blogsCategoriesList").html(data);
 }
-
-function getColor(index) {
-    const colors = ['gold', 'blue', 'orange', 'white']; // Add more colors if needed
-    return colors[index % colors.length];
-}
-
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
-
-})()
