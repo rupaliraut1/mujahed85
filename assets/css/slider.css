@@ -29,6 +29,9 @@
 .sidebar-link:hover {
     background-color: #777;
 }
+.card-decore{
+    padding: 25px;
+}
 
 #main-content {
     flex-grow: 1;
