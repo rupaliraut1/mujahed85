@@ -1,3 +1,4 @@
 {
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+    "liveServer.settings.port": 5501
 }
