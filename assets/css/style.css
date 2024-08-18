@@ -270,10 +270,33 @@ h6 {
   background-color: #0563bb;
 }
 
+/* Gallery */
+
+.gallery-design{
+  /* width: 1000px;
+  height: 600px; */
+}
+
+.bd-code-snippet {
+  margin-right: 0;
+  margin-left: 0;
+  border-width: 1px;
+  border-radius: var(--bs-border-radius);
+}
+.bd-code-snippet {
+  margin: 0 -1.5rem 1rem;
+  border: solid var(--bs-border-color);
+  border-width: 1px 0;
+}
+
+.bd-content .bd-code-snippet {
+  margin-bottom: 1rem;
+}
+
 /* blogs- card */
 
 .blogs-card{
-  padding: 0px 200px;
+  padding: 0px 30px;
 
 
 }

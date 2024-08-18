@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List .md Files in Directory</title>
+</head>
+<body>
+    <h1>Select a Directory</h1>
+    <input type="file" id="fileInput" webkitdirectory multiple>
+    <ul id="fileList"></ul>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const files = event.target.files;
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = ''; // Clear any existing list
+
+            // Loop through the files and display only .md files
+            for (let i = 0; i < files.length; i++) {
+                if (files[i].name.endsWith('.md')) { // Check if the file has a .md extension
+                    const li = document.createElement('li');
+                    li.textContent = files[i].name;
+                    fileList.appendChild(li);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
