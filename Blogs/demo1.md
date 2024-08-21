@@ -9,6 +9,8 @@ Eligible customers who apply for the AWS Lift Program and bill a minimum of US$1
 - **Starter Pack:** US$750 in AWS Promotional Credits to get started with our services.
 - **Tiered Promotional Credits:** Up to US$83,500 in promotional credits over 12 months as your business needs grow with AWS.
 
+Test
+
 ## Additional Information
 
 - **No Lock-In Period:** Enjoy the flexibility without being tied down.
