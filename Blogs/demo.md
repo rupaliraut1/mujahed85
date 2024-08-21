@@ -1,6 +1,6 @@
 # AWS Lift Program
 
-The AWS Lift Program is designed to help businesses kickstart their digitization journey with AWS. With more than 200 AWS services available, we are committed to supporting your business needs to improve agility, flexibility, and unlock a new world of possibilities.
+The AWS Lift Program is designed to help businesses kickstart their digitization journey with AWS. With more than 200 AWS services available, we are committed to supporting your business needs to improve agility, flexibility, and unlock a new world of possibilities. 
 
 ## Benefits
 
